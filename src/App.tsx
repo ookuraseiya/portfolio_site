@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Main } from './pages/Main';
 import './css/styles.css';
+import { About } from './pages/About';
+import { Works } from './pages/Works';
 
 function App() {
   return (
     <>
-      <div className="button">
-        <button className="button__layout">ボタン</button>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/works" element={<Works />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

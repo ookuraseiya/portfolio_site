@@ -1,10 +1,21 @@
 .header {
   width: 100%;
-}
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    width: 100%;
+    @include container();
+  }
 
-.button {
-  text-align: center;
-  &__layout {
-    @include button();
+  &__wrapper {
+    @include flex();
+    justify-content: flex-end;
+  }
+
+  &__link {
+    margin-left: 6%;
+    @include font20();
   }
 }

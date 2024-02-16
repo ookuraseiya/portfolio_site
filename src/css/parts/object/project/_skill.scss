@@ -1,0 +1,60 @@
+.skill {
+  margin: 10% 0 5% 0;
+  &__container {
+    @include container();
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+    @include color();
+    @include font50();
+  }
+
+  &__lead {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+    @include sub__color();
+    @include font20();
+  }
+
+  &__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include flex();
+  }
+
+  &__table {
+    width: 45%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 3%;
+    padding-bottom: 5%;
+    background-color: white;
+    text-align: center;
+
+    caption {
+      text-align: center;
+      background-color: white;
+      padding: 5%;
+      font-weight: bold;
+      @include font26();
+      @include color();
+    }
+
+    th {
+      text-align: center;
+      border: none;
+      padding-bottom: 6%;
+      @include font20();
+    }
+
+    td {
+      border: none;
+      padding-bottom: 6%;
+      @include font16();
+    }
+  }
+}
