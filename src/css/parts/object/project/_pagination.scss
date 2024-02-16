@@ -1,0 +1,36 @@
+.pagination {
+  margin: 3% 0;
+  @include font18();
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0 1%;
+    color: #fff;
+    @include background-color();
+    @include border();
+    @include responsive(xl) {
+      margin: 0 2%;
+    }
+  }
+
+  &__href {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__disabled {
+    display: none;
+  }
+}
