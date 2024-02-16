@@ -39,7 +39,11 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>TypeScript</td>
-                  <td>10ヵ月</td>
+                  <td>1年</td>
+                </tr>
+                <tr>
+                  <td>Java</td>
+                  <td>6ヵ月</td>
                 </tr>
               </tbody>
             </table>
@@ -59,6 +63,10 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>Next.js</td>
+                  <td>6ヵ月</td>
+                </tr>
+                <tr>
+                  <td>Spring Boots</td>
                   <td>6ヵ月</td>
                 </tr>
                 <tr>
@@ -107,19 +115,19 @@ export const Skill = () => {
               <tbody>
                 <tr>
                   <td>GitHub</td>
-                  <td>2年</td>
+                  <td>2年4ヵ月</td>
                 </tr>
                 <tr>
                   <td>Micro CMS</td>
-                  <td>1年6ヵ月</td>
-                </tr>
-                <tr>
-                  <td>WordPress</td>
                   <td>1年2ヵ月</td>
                 </tr>
                 <tr>
+                  <td>WordPress</td>
+                  <td>1年</td>
+                </tr>
+                <tr>
                   <td>IIS</td>
-                  <td>11ヵ月</td>
+                  <td>10ヵ月</td>
                 </tr>
                 <tr>
                   <td>AWS(EC2, S3等)</td>
