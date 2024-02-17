@@ -103,7 +103,7 @@
     }
 
     table img {
-      width: 290px;
+      width: 390px;
       height: 250px;
       @include responsive(xxxxl) {
         width: 90%;
@@ -131,24 +131,6 @@
       align-items: center;
       @include responsive(xl) {
         flex-direction: column;
-      }
-    }
-
-    th h3 {
-      width: 520px;
-      margin-top: 1%;
-      padding-bottom: 4%;
-      @include responsive(xxxxxl) {
-        width: 370px;
-        @include responsive(xxxl) {
-          width: 330px;
-          @include responsive(xxl) {
-            width: 300px;
-            @include responsive(xl) {
-              width: 100%;
-            }
-          }
-        }
       }
     }
 
