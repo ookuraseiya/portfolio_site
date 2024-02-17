@@ -36,7 +36,7 @@
     padding: 3%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    @include responsive(xl) {
+    @include responsive(xxxxl) {
       width: 80%;
       @include responsive(lg) {
         width: 100%;
@@ -50,10 +50,14 @@
       margin: 2% 0 4% 0;
       @include color();
       @include font20();
-      @include responsive(sm) {
-        @include font14();
-        @include responsive(xs) {
-          @include font12();
+      @include responsive(xxxxl) {
+        margin: 2% 0 3% 0;
+        @include font18();
+        @include responsive(sm) {
+          @include font14();
+          @include responsive(xs) {
+            @include font12();
+          }
         }
       }
     }

@@ -716,17 +716,17 @@ template {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .businessDetails__richEditor {
     width: 80%;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 992px) {
+@media screen and (max-width: 1400px) and (max-width: 992px) {
   .businessDetails__richEditor {
     width: 100%;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 992px) and (max-width: 576px) {
+@media screen and (max-width: 1400px) and (max-width: 992px) and (max-width: 576px) {
   .businessDetails__richEditor {
     padding: 6%;
   }
@@ -736,12 +736,18 @@ template {
   color: #434343;
   font-size: 2em;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1400px) {
+  .businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
+    margin: 2% 0 3% 0;
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 576px) {
   .businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
     font-size: 1.4em;
   }
 }
-@media screen and (max-width: 576px) and (max-width: 375px) {
+@media screen and (max-width: 1400px) and (max-width: 576px) and (max-width: 375px) {
   .businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
     font-size: 1.2em;
   }
@@ -1120,12 +1126,17 @@ template {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
+  .personalDetails__richEditor {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 1024px) {
   .personalDetails__richEditor {
     width: 100%;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 576px) {
+@media screen and (max-width: 1400px) and (max-width: 1024px) and (max-width: 576px) {
   .personalDetails__richEditor {
     padding: 6%;
   }
@@ -1181,31 +1192,19 @@ template {
   width: 320px;
   height: 250px;
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
   .personalDetails__richEditor table img {
-    width: 370px;
-    height: 380px;
+    width: 90%;
+    margin: auto;
   }
 }
-@media screen and (max-width: 1500px) and (max-width: 1300px) {
-  .personalDetails__richEditor table img {
-    width: 330px;
-    height: 350px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
-  .personalDetails__richEditor table img {
-    width: 300px;
-    height: 320px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
+@media screen and (max-width: 1400px) and (max-width: 1024px) {
   .personalDetails__richEditor table img {
     margin: 5% 0;
     width: 100vh;
   }
 }
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) and (max-width: 576px) {
+@media screen and (max-width: 1400px) and (max-width: 1024px) and (max-width: 576px) {
   .personalDetails__richEditor table img {
     width: 80%;
     height: 60%;
@@ -1335,7 +1334,13 @@ template {
   border-radius: 50%;
   overflow: hidden;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
+  .profile__image--layout {
+    width: 45vh;
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 1024px) {
   .profile__image--layout {
     width: 20vh;
     height: 20vh;
@@ -1351,17 +1356,22 @@ template {
   width: 60%;
   font-size: 1.8em;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
+  .profile__text {
+    font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 1024px) {
   .profile__text {
     width: 100%;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 768px) {
+@media screen and (max-width: 1400px) and (max-width: 1024px) and (max-width: 768px) {
   .profile__text {
     font-size: 1.4em;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 768px) and (max-width: 576px) {
+@media screen and (max-width: 1400px) and (max-width: 1024px) and (max-width: 768px) and (max-width: 576px) {
   .profile__text {
     font-size: 1.2em;
   }
@@ -1556,12 +1566,12 @@ template {
   background-repeat: no-repeat;
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .works__card {
     width: 47%;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 576px) {
+@media screen and (max-width: 1400px) and (max-width: 576px) {
   .works__card {
     display: block;
     width: 100%;
