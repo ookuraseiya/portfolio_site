@@ -44,6 +44,9 @@
     margin-top: 3%;
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
+    @include responsive(sm) {
+      margin-top: 6%;
+    }
     &:hover {
       transform: translateY(-3px);
     }

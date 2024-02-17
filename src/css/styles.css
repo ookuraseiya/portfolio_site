@@ -639,6 +639,11 @@ template {
   background-color: #fff;
   transition: transform 0.3s ease-in-out;
 }
+@media screen and (max-width: 576px) {
+  .business__card {
+    margin-top: 6%;
+  }
+}
 .business__card:hover {
   transform: translateY(-3px);
 }
