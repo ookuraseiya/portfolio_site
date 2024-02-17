@@ -3,10 +3,12 @@ import { Link, useParams } from 'react-router-dom';
 import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { BusinessType } from '../components/utility/type/BusinessType';
+import { Loading } from '../components/animetions/Loading';
 
 export const BusinessDetails = () => {
   let { id } = useParams();
   const [posts, setPosts] = useState<BusinessType[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch(
@@ -25,42 +27,49 @@ export const BusinessDetails = () => {
         setPosts(
           data.contents.filter((data: { id: string }) => data.id === String(id))
         );
+        setLoading(false);
       });
   }, [id]);
 
   return (
     <>
-      <Header />
-      <section className="businessDetails">
-        <div className="businessDetails__container">
-          <h1 className="businessDetails__title">
-            Business development details
-          </h1>
-          <p className="businessDetails__lead">
-            選択したプロジェクトの詳細です
-          </p>
-          <ul className="businessDetails__wrapper">
-            {posts.map((post) => (
-              <div className="businessDetails__richEditor" key={post.id}>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: post.details,
-                  }}
-                ></div>
-              </div>
-            ))}
-            <div className="businessDetails__button">
-              <Link
-                to={'/business/1'}
-                className="businessDetails__button--layout"
-              >
-                一覧に戻る
-              </Link>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Header />
+          <section className="businessDetails">
+            <div className="businessDetails__container">
+              <h1 className="businessDetails__title">
+                Business development details
+              </h1>
+              <p className="businessDetails__lead">
+                選択したプロジェクトの詳細です
+              </p>
+              <ul className="businessDetails__wrapper">
+                {posts.map((post) => (
+                  <div className="businessDetails__richEditor" key={post.id}>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: post.details,
+                      }}
+                    ></div>
+                  </div>
+                ))}
+                <div className="businessDetails__button">
+                  <Link
+                    to={'/business/1'}
+                    className="businessDetails__button--layout"
+                  >
+                    一覧に戻る
+                  </Link>
+                </div>
+              </ul>
             </div>
-          </ul>
-        </div>
-      </section>
-      <Footer />
+          </section>
+          <Footer />
+        </>
+      )}
     </>
   );
 };

@@ -1,11 +1,11 @@
-// import ReactLoading from 'react-loading';
+import ReactLoading from 'react-loading';
 
-// export const Loading = () => {
-//   return (
-//     <>
-//       <div className="loading">
-//         <ReactLoading type="spinningBubbles" color="#5a320a" />
-//       </div>
-//     </>
-//   );
-// };
+export const Loading = () => {
+  return (
+    <>
+      <div className="loading">
+        <ReactLoading type="spinningBubbles" color="#434343" />
+      </div>
+    </>
+  );
+};

@@ -4,11 +4,13 @@ import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { Pagination } from '../components/utility/Pagination';
 import { PersonalType } from '../components/utility/type/PersonalType';
+import { Loading } from '../components/animetions/Loading';
 
 export const Personal = () => {
   let { id } = useParams();
   const [posts, setPosts] = useState<PersonalType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch(
@@ -25,6 +27,7 @@ export const Personal = () => {
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.contents);
+        setLoading(false);
       });
   }, []);
 
@@ -48,46 +51,52 @@ export const Personal = () => {
 
   return (
     <>
-      <Header />
-      <section className="personal">
-        <div className="personal__container">
-          <h1 className="personal__title">Personal development</h1>
-          <p className="personal__lead">
-            これまで個人で開発してきたプロダクトです
-          </p>
-          <ul className="personal__wrapper">
-            {judge() ? (
-              <>
-                {posts.slice(firstPost, lastPost).map((post) => (
-                  <Link
-                    className="personal__card"
-                    to={`/personalDetail/${post.id}`}
-                    key={post.id}
-                  >
-                    <img
-                      className="personal__card--image"
-                      src={post.image.url}
-                      alt="これまで個人で開発してきたプロダクトの画像"
-                    />
-                    <p className="personal__card--lead">{post.name}</p>
-                  </Link>
-                ))}
-              </>
-            ) : (
-              <h1 className="personal__card--error">
-                プロダクトがありません。
-              </h1>
-            )}
-          </ul>
-          <Pagination
-            id={Number(id)}
-            currentPage={currentPage}
-            paginationNumber={paginationNumber}
-            pageUrl={'personal'}
-          />
-        </div>
-      </section>
-      <Footer />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Header />
+          <section className="personal">
+            <div className="personal__container">
+              <h1 className="personal__title">Personal development</h1>
+              <p className="personal__lead">
+                これまで個人で開発してきたプロダクトです
+              </p>
+              <ul className="personal__wrapper">
+                {judge() ? (
+                  <>
+                    {posts.slice(firstPost, lastPost).map((post) => (
+                      <Link
+                        className="personal__card"
+                        to={`/personalDetail/${post.id}`}
+                        key={post.id}
+                      >
+                        <img
+                          className="personal__card--image"
+                          src={post.image.url}
+                          alt="これまで個人で開発してきたプロダクトの画像"
+                        />
+                        <p className="personal__card--lead">{post.name}</p>
+                      </Link>
+                    ))}
+                  </>
+                ) : (
+                  <h1 className="personal__card--error">
+                    プロダクトがありません。
+                  </h1>
+                )}
+              </ul>
+              <Pagination
+                id={Number(id)}
+                currentPage={currentPage}
+                paginationNumber={paginationNumber}
+                pageUrl={'personal'}
+              />
+            </div>
+          </section>
+          <Footer />
+        </>
+      )}
     </>
   );
 };

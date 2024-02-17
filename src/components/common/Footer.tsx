@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { ScrollTop } from '../utility/ScrollTop';
 
 export const Footer = () => {
   return (
     <>
+      <ScrollTop />
       <footer className="footer">
         <div className="footer__container">
           <ul className="footer__wrapper">

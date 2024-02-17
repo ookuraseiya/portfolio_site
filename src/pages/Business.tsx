@@ -4,11 +4,13 @@ import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { Pagination } from '../components/utility/Pagination';
 import { BusinessType } from '../components/utility/type/BusinessType';
+import { Loading } from '../components/animetions/Loading';
 
 export const Business = () => {
   let { id } = useParams();
   const [posts, setPosts] = useState<BusinessType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch(
@@ -25,6 +27,7 @@ export const Business = () => {
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.contents);
+        setLoading(false);
       });
   }, []);
 
@@ -48,44 +51,50 @@ export const Business = () => {
 
   return (
     <>
-      <Header />
-      <section className="business">
-        <div className="business__container">
-          <h1 className="business__title">Business development</h1>
-          <p className="business__lead">
-            これまで業務で携わってきたプロジェクトです
-          </p>
-          <ul className="business__wrapper">
-            {judge() ? (
-              <>
-                {posts.slice(firstPost, lastPost).map((post) => (
-                  <Link
-                    className="business__card"
-                    to={`/businessDetail/${post.id}`}
-                    key={post.id}
-                  >
-                    <p className="business__card--label">プロジェクト名:</p>
-                    <p className="business__card--lead">{post.name}</p>
-                    <p className="business__card--label">開発期間:</p>
-                    <p className="business__card--lead">{post.period}</p>
-                  </Link>
-                ))}
-              </>
-            ) : (
-              <h1 className="business__card--error">
-                プロジェクトがありません。
-              </h1>
-            )}
-          </ul>
-          <Pagination
-            id={Number(id)}
-            currentPage={currentPage}
-            paginationNumber={paginationNumber}
-            pageUrl={'business'}
-          />
-        </div>
-      </section>
-      <Footer />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Header />
+          <section className="business">
+            <div className="business__container">
+              <h1 className="business__title">Business development</h1>
+              <p className="business__lead">
+                これまで業務で携わってきたプロジェクトです
+              </p>
+              <ul className="business__wrapper">
+                {judge() ? (
+                  <>
+                    {posts.slice(firstPost, lastPost).map((post) => (
+                      <Link
+                        className="business__card"
+                        to={`/businessDetail/${post.id}`}
+                        key={post.id}
+                      >
+                        <p className="business__card--label">プロジェクト名:</p>
+                        <p className="business__card--lead">{post.name}</p>
+                        <p className="business__card--label">開発期間:</p>
+                        <p className="business__card--lead">{post.period}</p>
+                      </Link>
+                    ))}
+                  </>
+                ) : (
+                  <h1 className="business__card--error">
+                    プロジェクトがありません。
+                  </h1>
+                )}
+              </ul>
+              <Pagination
+                id={Number(id)}
+                currentPage={currentPage}
+                paginationNumber={paginationNumber}
+                pageUrl={'business'}
+              />
+            </div>
+          </section>
+          <Footer />
+        </>
+      )}
     </>
   );
 };

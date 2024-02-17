@@ -12,8 +12,10 @@
   "dependencies": {
     "@types/history": "^5.0.0",
     "@types/react-router-dom": "^5.3.3",
+    "framer-motion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
