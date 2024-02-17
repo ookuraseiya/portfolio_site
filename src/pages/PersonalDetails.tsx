@@ -40,9 +40,7 @@ export const PersonalDetails = () => {
           <Header />
           <section className="personalDetails">
             <div className="personalDetails__container">
-              <h1 className="personalDetails__title">
-                Personal development details
-              </h1>
+              <h1 className="personalDetails__title">Details</h1>
               <p className="personalDetails__lead">
                 選択したプロダクトの詳細です
               </p>

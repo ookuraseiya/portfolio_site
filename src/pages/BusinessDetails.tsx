@@ -40,9 +40,7 @@ export const BusinessDetails = () => {
           <Header />
           <section className="businessDetails">
             <div className="businessDetails__container">
-              <h1 className="businessDetails__title">
-                Business development details
-              </h1>
+              <h1 className="businessDetails__title">Details</h1>
               <p className="businessDetails__lead">
                 選択したプロジェクトの詳細です
               </p>

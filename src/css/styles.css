@@ -716,6 +716,11 @@ template {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 576px) {
+  .businessDetails__richEditor {
+    margin: 5% 0 10% 0;
+  }
+}
 @media screen and (max-width: 1400px) {
   .businessDetails__richEditor {
     width: 80%;
@@ -838,6 +843,11 @@ template {
 .businessDetails__button--layout:hover {
   transform: translateY(-3px);
 }
+@media screen and (max-width: 576px) {
+  .businessDetails__button--layout {
+    padding: 5% 13%;
+  }
+}
 
 .main {
   width: 100%;
@@ -912,7 +922,7 @@ template {
     margin: 0 2%;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 375px) {
+@media screen and (max-width: 1024px) and (max-width: 576px) {
   .pagination__link {
     margin: 0 4%;
   }
@@ -1088,7 +1098,7 @@ template {
 }
 @media screen and (max-width: 768px) {
   .personalDetails__wrapper {
-    margin: 0 5%;
+    margin: 0;
   }
 }
 .personalDetails__richEditor {
@@ -1097,6 +1107,11 @@ template {
   padding: 3%;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 576px) {
+  .personalDetails__richEditor {
+    margin: 5% 0 10% 0;
+  }
 }
 @media screen and (max-width: 1400px) {
   .personalDetails__richEditor {
@@ -1252,6 +1267,11 @@ template {
 }
 .personalDetails__button--layout:hover {
   transform: translateY(-3px);
+}
+@media screen and (max-width: 576px) {
+  .personalDetails__button--layout {
+    padding: 5% 13%;
+  }
 }
 
 .profile__container {

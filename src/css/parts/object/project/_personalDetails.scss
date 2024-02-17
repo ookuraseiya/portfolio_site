@@ -33,7 +33,7 @@
   &__wrapper {
     @include container();
     @include responsive(md) {
-      margin: 0 5%;
+      margin: 0;
     }
   }
 
@@ -43,6 +43,9 @@
     padding: 3%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @include responsive(sm) {
+      margin: 5% 0 10% 0;
+    }
     @include responsive(xxxxl) {
       width: 80%;
       @include responsive(xl) {
@@ -165,6 +168,9 @@
     text-align: center;
     &--layout {
       @include button();
+      @include responsive(sm) {
+        padding: 5% 13%;
+      }
     }
   }
 }

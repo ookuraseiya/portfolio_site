@@ -19,7 +19,7 @@
     @include border();
     @include responsive(xl) {
       margin: 0 2%;
-      @include responsive(xs) {
+      @include responsive(sm) {
         margin: 0 4%;
       }
     }
