@@ -1,0 +1,22 @@
+.businessDetails {
+  margin: 5% 0;
+  &__container {
+    @include container();
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+    @include color();
+    @include font50();
+  }
+
+  &__lead {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+    @include sub__color();
+    @include font20();
+  }
+}

@@ -514,6 +514,72 @@ template {
   margin: 0 10%;
 }
 
+.business {
+  margin: 5% 0;
+}
+.business__container {
+  margin: 0 10%;
+}
+.business__title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+  color: #434343;
+  font-size: 5em;
+}
+.business__lead {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3%;
+  color: #9f9b96;
+  font-size: 2em;
+}
+.business__wrapper {
+  margin: 0 10%;
+}
+.business__card {
+  display: block;
+  width: 100%;
+  padding: 1.5% 2.5%;
+  margin-top: 3%;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+.business__card:hover {
+  transform: translateY(-3px);
+}
+.business__card--label {
+  font-weight: bold;
+  color: #434343;
+  font-size: 2.8em;
+}
+.business__card--lead {
+  margin-bottom: 1%;
+  color: #434343;
+  font-size: 2em;
+}
+
+.businessDetails {
+  margin: 5% 0;
+}
+.businessDetails__container {
+  margin: 0 10%;
+}
+.businessDetails__title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+  color: #434343;
+  font-size: 5em;
+}
+.businessDetails__lead {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3%;
+  color: #9f9b96;
+  font-size: 2em;
+}
+
 .main {
   width: 100%;
   height: 90vh;
@@ -554,7 +620,7 @@ template {
   height: 2.5em;
   margin: 0 1%;
   color: #fff;
-  background-color: #f3f3f3;
+  background-color: #434343;
   border-radius: 5px;
   border: 1px solid #434343;
 }
@@ -569,9 +635,102 @@ template {
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-bottom: 16%;
 }
 .pagination__disabled {
   display: none;
+}
+
+.personal {
+  margin: 5% 0;
+}
+.personal__container {
+  margin: 0 10%;
+}
+.personal__title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+  color: #434343;
+  font-size: 5em;
+}
+.personal__lead {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3%;
+  color: #9f9b96;
+  font-size: 2em;
+}
+.personal__wrapper {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10%;
+}
+.personal__wrapper::after {
+  content: "";
+  display: block;
+  width: 30%;
+}
+.personal__card {
+  margin-top: 3%;
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+.personal__card:hover {
+  transform: translateY(-3px);
+}
+.personal__card--image {
+  width: 100%;
+}
+.personal__card--lead {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #434343;
+  font-size: 2em;
+}
+
+.personalDetails {
+  margin: 5% 0;
+}
+.personalDetails__container {
+  margin: 0 10%;
+}
+.personalDetails__title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+  color: #434343;
+  font-size: 5em;
+}
+.personalDetails__lead {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3%;
+  color: #9f9b96;
+  font-size: 2em;
+}
+.personalDetails__button {
+  text-align: center;
+}
+.personalDetails__button--layout {
+  color: #fff;
+  padding: 2% 6%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  background-color: #434343;
+}
+.personalDetails__button--layout:hover {
+  transform: translateY(-3px);
 }
 
 .profile__container {
@@ -701,10 +860,10 @@ template {
   transform: translateY(-3px);
 }
 .works__card--personal {
-  background-image: url("/public/images/personal.webp");
+  background-image: url("/images/personal.webp");
 }
 .works__card--business {
-  background-image: url("/public/images/business.webp");
+  background-image: url("/images/business.webp");
 }
 .works__card--wrapper {
   padding: 5% 0 7% 0;

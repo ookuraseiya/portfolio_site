@@ -71,7 +71,7 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>Three.js</td>
-                  <td>6ヵ月</td>
+                  <td>3ヵ月</td>
                 </tr>
                 <tr>
                   <td>Tailwind css</td>

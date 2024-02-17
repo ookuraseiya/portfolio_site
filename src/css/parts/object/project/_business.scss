@@ -1,2 +1,50 @@
 .business {
+  margin: 5% 0;
+  &__container {
+    @include container();
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+    @include color();
+    @include font50();
+  }
+
+  &__lead {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+    @include sub__color();
+    @include font20();
+  }
+
+  &__wrapper {
+    @include container();
+  }
+
+  &__card {
+    display: block;
+    width: 100%;
+    padding: 1.5% 2.5%;
+    margin-top: 3%;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &--label {
+      font-weight: bold;
+      @include color();
+      @include font28();
+    }
+
+    &--lead {
+      margin-bottom: 1%;
+      @include color();
+      @include font20();
+    }
+  }
 }

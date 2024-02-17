@@ -18,7 +18,7 @@ export const Profile = () => {
               Bootsを個人ではReactとTypeScrptをよく触っています。
               <br />
               <br />
-              主な経歴です：
+              主な経歴：
               <br />
               ・2021/02 ~ 2023/06：
               <br />
