@@ -1051,6 +1051,23 @@ template {
   color: #434343;
   font-size: 2em;
 }
+.personal__card--error {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+}
+@media screen and (max-width: 576px) {
+  .personal__card--error {
+    font-size: 2.6em;
+  }
+}
+@media screen and (max-width: 576px) and (max-width: 375px) {
+  .personal__card--error {
+    font-size: 2em;
+  }
+}
 
 .personalDetails {
   margin: 5% 0;

@@ -84,5 +84,19 @@
       @include color();
       @include font20();
     }
+
+    &--error {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include font40();
+      @include responsive(sm) {
+        @include font26();
+        @include responsive(xs) {
+          @include font20();
+        }
+      }
+    }
   }
 }
