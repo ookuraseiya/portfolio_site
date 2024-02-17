@@ -99,27 +99,6 @@
       font-size: 1.6em;
     }
 
-    table img {
-      width: 520px;
-      height: 450px;
-      @include responsive(xxxxxl) {
-        width: 370px;
-        height: 380px;
-        @include responsive(xxxl) {
-          width: 330px;
-          height: 350px;
-          @include responsive(xxl) {
-            width: 300px;
-            height: 320px;
-            @include responsive(xl) {
-              margin: 5% 0;
-              width: 100vh;
-            }
-          }
-        }
-      }
-    }
-
     table {
       width: 100%;
     }

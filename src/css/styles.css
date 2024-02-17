@@ -784,34 +784,6 @@ template {
   display: flex;
   font-size: 1.6em;
 }
-.businessDetails__richEditor table img {
-  width: 520px;
-  height: 450px;
-}
-@media screen and (max-width: 1500px) {
-  .businessDetails__richEditor table img {
-    width: 370px;
-    height: 380px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) {
-  .businessDetails__richEditor table img {
-    width: 330px;
-    height: 350px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
-  .businessDetails__richEditor table img {
-    width: 300px;
-    height: 320px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
-  .businessDetails__richEditor table img {
-    margin: 5% 0;
-    width: 100vh;
-  }
-}
 .businessDetails__richEditor table {
   width: 100%;
 }
@@ -1189,7 +1161,7 @@ template {
   font-size: 1.6em;
 }
 .personalDetails__richEditor table img {
-  width: 320px;
+  width: 290px;
   height: 250px;
 }
 @media screen and (max-width: 1400px) {
