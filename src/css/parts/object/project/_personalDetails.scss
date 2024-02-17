@@ -105,16 +105,25 @@
     table img {
       width: 320px;
       height: 250px;
-      @include responsive(xxxxl) {
-        width: 90%;
-        margin: auto;
-        @include responsive(xl) {
-          margin: 5% 0;
-          width: 100vh;
-          @include responsive(sm) {
-            width: 80%;
-            height: 60%;
-            margin: 5% auto;
+      @include responsive(xxxxxxxl) {
+        width: 275px;
+        @include responsive(xxxxxxl) {
+          width: 255px;
+          @include responsive(xxxxxl) {
+            width: 235px;
+            @include responsive(xxxxl) {
+              width: 90%;
+              margin: auto;
+              @include responsive(xl) {
+                margin: 5% 0;
+                width: 100vh;
+                @include responsive(sm) {
+                  width: 80%;
+                  height: 60%;
+                  margin: 5% auto;
+                }
+              }
+            }
           }
         }
       }

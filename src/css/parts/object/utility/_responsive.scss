@@ -26,6 +26,13 @@ $breakpoints: (
   'xxxxxl': (
     max-width: 1500px,
   ),
+  'xxxxxxl': (
+    max-width: 1600px,
+  ),
+  'xxxxxxxl': (
+    max-width: 1700px,
+  ),
+  // モニターがものによるが1903px(横)
 ) !default;
 
 @mixin responsive($breakpoint) {

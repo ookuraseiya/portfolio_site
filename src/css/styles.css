@@ -1164,19 +1164,34 @@ template {
   width: 320px;
   height: 250px;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1700px) {
+  .personalDetails__richEditor table img {
+    width: 275px;
+  }
+}
+@media screen and (max-width: 1700px) and (max-width: 1600px) {
+  .personalDetails__richEditor table img {
+    width: 255px;
+  }
+}
+@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) {
+  .personalDetails__richEditor table img {
+    width: 235px;
+  }
+}
+@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) {
   .personalDetails__richEditor table img {
     width: 90%;
     margin: auto;
   }
 }
-@media screen and (max-width: 1400px) and (max-width: 1024px) {
+@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) and (max-width: 1024px) {
   .personalDetails__richEditor table img {
     margin: 5% 0;
     width: 100vh;
   }
 }
-@media screen and (max-width: 1400px) and (max-width: 1024px) and (max-width: 576px) {
+@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) and (max-width: 1024px) and (max-width: 576px) {
   .personalDetails__richEditor table img {
     width: 80%;
     height: 60%;
@@ -1287,7 +1302,13 @@ template {
     height: 45vh;
   }
 }
-@media screen and (max-width: 1400px) and (max-width: 1024px) {
+@media screen and (max-width: 1400px) and (max-width: 1200px) {
+  .profile__image--layout {
+    width: 30vh;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 1200px) and (max-width: 1024px) {
   .profile__image--layout {
     width: 20vh;
     height: 20vh;
@@ -1311,6 +1332,7 @@ template {
 @media screen and (max-width: 1400px) and (max-width: 1024px) {
   .profile__text {
     width: 100%;
+    font-size: 1.6em;
   }
 }
 @media screen and (max-width: 1400px) and (max-width: 1024px) and (max-width: 768px) {

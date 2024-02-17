@@ -36,9 +36,13 @@
       @include responsive(xxxxl) {
         width: 45vh;
         height: 45vh;
-        @include responsive(xl) {
-          width: 20vh;
-          height: 20vh;
+        @include responsive(xxl) {
+          width: 30vh;
+          height: 30vh;
+          @include responsive(xl) {
+            width: 20vh;
+            height: 20vh;
+          }
         }
       }
     }
@@ -54,6 +58,7 @@
       @include font16();
       @include responsive(xl) {
         width: 100%;
+        @include font16();
         @include responsive(md) {
           @include font14();
           @include responsive(sm) {
