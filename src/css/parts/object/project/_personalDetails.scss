@@ -10,6 +10,12 @@
     margin-bottom: 1%;
     @include color();
     @include font50();
+    @include responsive(sm) {
+      @include font40();
+      @include responsive(xs) {
+        @include font30();
+      }
+    }
   }
 
   &__lead {
@@ -18,10 +24,17 @@
     margin-bottom: 3%;
     @include sub__color();
     @include font20();
+    @include responsive(sm) {
+      margin-bottom: 6%;
+      @include font10();
+    }
   }
 
   &__wrapper {
     @include container();
+    @include responsive(md) {
+      margin: 0 5%;
+    }
   }
 
   &__richEditor {
@@ -30,13 +43,22 @@
     padding: 3%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @include responsive(xl) {
+      width: 100%;
+      @include responsive(sm) {
+        padding: 6%;
+      }
+    }
 
     .fontStyle__p {
       margin: 2% 0 4% 0;
       @include color();
       @include font18();
       @include responsive(sm) {
-        @include font16();
+        @include font14();
+        @include responsive(xs) {
+          @include font12();
+        }
       }
     }
 
@@ -46,6 +68,9 @@
       @include font28();
       @include responsive(sm) {
         @include font20();
+        @include responsive(xs) {
+          @include font18();
+        }
       }
     }
 
@@ -89,6 +114,11 @@
             @include responsive(xl) {
               margin: 5% 0;
               width: 100vh;
+              @include responsive(sm) {
+                width: 80%;
+                height: 60%;
+                margin: 5% auto;
+              }
             }
           }
         }

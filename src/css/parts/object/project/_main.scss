@@ -13,6 +13,12 @@
     font-weight: bold;
     @include font50();
     @include color();
+    @include responsive(sm) {
+      @include font34();
+      @include responsive(xs) {
+        @include font28();
+      }
+    }
   }
 
   &__wrapper {
@@ -28,6 +34,9 @@
     @include color();
     &:hover {
       transform: translateY(-3px);
+    }
+    @include responsive(sm) {
+      @include font20();
     }
   }
 }

@@ -19,6 +19,9 @@
     @include border();
     @include responsive(xl) {
       margin: 0 2%;
+      @include responsive(xs) {
+        margin: 0 4%;
+      }
     }
   }
 

@@ -14,7 +14,7 @@ export const BusinessDetails = () => {
     fetch(
       `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
         import.meta.env.VITE_MICROCMS_ENDPOINT_BUSINESS
-      )}`,
+      )}?limit=100&orders=-publishedAt`,
       {
         headers: {
           'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),

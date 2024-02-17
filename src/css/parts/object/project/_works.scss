@@ -1,5 +1,13 @@
 .works {
   margin: 5% 0;
+  @include responsive(xl) {
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__container {
     @include container();
   }
@@ -10,6 +18,12 @@
     margin-bottom: 1%;
     @include color();
     @include font50();
+    @include responsive(sm) {
+      @include font40();
+      @include responsive(xs) {
+        @include font30();
+      }
+    }
   }
 
   &__lead {
@@ -18,11 +32,21 @@
     margin-bottom: 3%;
     @include sub__color();
     @include font20();
+    @include responsive(sm) {
+      margin-bottom: 6%;
+      @include font10();
+    }
   }
 
   &__wrapper {
     @include flex();
     justify-content: space-evenly;
+    @include responsive(xl) {
+      @include flex();
+      @include responsive(sm) {
+        display: block;
+      }
+    }
   }
 
   &__card {
@@ -33,6 +57,14 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
+    @include responsive(xl) {
+      width: 47%;
+      @include responsive(sm) {
+        display: block;
+        width: 100%;
+        margin-bottom: 10%;
+      }
+    }
 
     &:hover {
       transform: translateY(-3px);
@@ -49,16 +81,29 @@
     &--wrapper {
       padding: 5% 0 7% 0;
       background-color: rgba(255, 255, 255, 0.8);
+      @include responsive(xl) {
+        padding: 5% 2% 7% 2%;
+      }
     }
 
     &--heading {
       font-weight: bold;
       @include color();
       @include font34();
+      @include responsive(sm) {
+        @include font24();
+        @include responsive(xs) {
+          @include font20();
+        }
+      }
     }
     &--lead {
       @include color();
       @include font18();
+      @include responsive(sm) {
+        margin-top: 5%;
+        @include font12();
+      }
     }
   }
 }

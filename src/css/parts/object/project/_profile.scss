@@ -4,6 +4,9 @@
   }
   &__wrapper {
     @include flex();
+    @include responsive(xl) {
+      display: block;
+    }
   }
 
   &__title {
@@ -12,6 +15,12 @@
     margin-bottom: 3%;
     @include color();
     @include font50();
+    @include responsive(sm) {
+      @include font40();
+      @include responsive(xs) {
+        @include font30();
+      }
+    }
   }
 
   &__image {
@@ -24,10 +33,27 @@
       height: 30vh;
       border-radius: 50%;
       overflow: hidden;
+      @include responsive(xl) {
+        width: 20vh;
+        height: 20vh;
+      }
+    }
+    @include responsive(xl) {
+      width: 100%;
+      margin-bottom: 5%;
     }
   }
   &__text {
     width: 60%;
     @include font18();
+    @include responsive(xl) {
+      width: 100%;
+      @include responsive(md) {
+        @include font14();
+        @include responsive(sm) {
+          @include font12();
+        }
+      }
+    }
   }
 }

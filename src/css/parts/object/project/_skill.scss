@@ -10,6 +10,12 @@
     margin-bottom: 1%;
     @include color();
     @include font50();
+    @include responsive(sm) {
+      @include font40();
+      @include responsive(xs) {
+        @include font30();
+      }
+    }
   }
 
   &__lead {
@@ -18,12 +24,19 @@
     margin-bottom: 3%;
     @include sub__color();
     @include font20();
+    @include responsive(sm) {
+      @include font10();
+      margin-bottom: 6%;
+    }
   }
 
   &__wrapper {
     flex-wrap: wrap;
     justify-content: flex-start;
     @include flex();
+    @include responsive(sm) {
+      display: block;
+    }
   }
 
   &__table {
@@ -34,6 +47,12 @@
     padding-bottom: 5%;
     background-color: white;
     text-align: center;
+    @include responsive(sm) {
+      width: 100%;
+      @include responsive(sm) {
+        margin-top: 8%;
+      }
+    }
 
     caption {
       text-align: center;
@@ -42,6 +61,12 @@
       font-weight: bold;
       @include font26();
       @include color();
+      @include responsive(xl) {
+        @include font20();
+        @include responsive(md) {
+          @include font14();
+        }
+      }
     }
 
     th {
@@ -49,12 +74,24 @@
       border: none;
       padding-bottom: 6%;
       @include font20();
+      @include responsive(xl) {
+        @include font18();
+        @include responsive(md) {
+          @include font12();
+        }
+      }
     }
 
     td {
       border: none;
       padding-bottom: 6%;
       @include font16();
+      @include responsive(xl) {
+        @include font14();
+        @include responsive(md) {
+          @include font12();
+        }
+      }
     }
   }
 }

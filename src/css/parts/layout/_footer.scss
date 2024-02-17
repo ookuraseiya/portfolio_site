@@ -25,5 +25,11 @@
         transform: none;
       }
     }
+    @include responsive(sm) {
+      @include font14();
+      @include responsive(xs) {
+        @include font12();
+      }
+    }
   }
 }
