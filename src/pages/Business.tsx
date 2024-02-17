@@ -1,9 +1,51 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { Pagination } from '../components/utility/Pagination';
+import { BusinessType } from '../components/utility/type/BusinessType';
 
 export const Business = () => {
+  let { id } = useParams();
+  const [posts, setPosts] = useState<BusinessType[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  useEffect(() => {
+    fetch(
+      `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
+        import.meta.env.VITE_MICROCMS_ENDPOINT_BUSINESS
+      )}?limit=100&orders=-publishedAt`,
+      {
+        headers: {
+          'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),
+        },
+        method: 'GET',
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data.contents);
+      });
+  }, []);
+
+  useEffect(() => {
+    setCurrentPage(Number(id));
+  }, [id]);
+
+  const PER_PAGE: number = 9;
+  const lastPost: number = currentPage * PER_PAGE;
+  const firstPost: number = lastPost - PER_PAGE;
+  const totalPosts: number = posts.length;
+  const paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
+
+  const judge = () => {
+    if (1 > Number(id) || paginationNumber < Number(id) || isNaN(Number(id))) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <>
       <Header />
@@ -14,35 +56,33 @@ export const Business = () => {
             これまで業務で携わってきたプロジェクトです
           </p>
           <ul className="business__wrapper">
-            <Link className="business__card" to={''}>
-              <p className="business__card--label">プロジェクト名:</p>
-              <p className="business__card--lead">Webサイト制作・開発</p>
-              <p className="business__card--label">開発期間:</p>
-              <p className="business__card--lead">2022/12 - 2023/3</p>
-            </Link>
-
-            <Link className="business__card" to={''}>
-              <p className="business__card--label">プロジェクト名:</p>
-              <p className="business__card--lead">Webサイト制作・開発</p>
-              <p className="business__card--label">開発期間:</p>
-              <p className="business__card--lead">2022/12 - 2023/3</p>
-            </Link>
-
-            <Link className="business__card" to={''}>
-              <p className="business__card--label">プロジェクト名:</p>
-              <p className="business__card--lead">Webサイト制作・開発</p>
-              <p className="business__card--label">開発期間:</p>
-              <p className="business__card--lead">2022/12 - 2023/3</p>
-            </Link>
-
-            <Link className="business__card" to={''}>
-              <p className="business__card--label">プロジェクト名:</p>
-              <p className="business__card--lead">Webサイト制作・開発</p>
-              <p className="business__card--label">開発期間:</p>
-              <p className="business__card--lead">2022/12 - 2023/3</p>
-            </Link>
+            {judge() ? (
+              <>
+                {posts.slice(firstPost, lastPost).map((post) => (
+                  <Link
+                    className="business__card"
+                    to={`/businessDetail/${post.id}`}
+                    key={post.id}
+                  >
+                    <p className="business__card--label">プロジェクト名:</p>
+                    <p className="business__card--lead">{post.name}</p>
+                    <p className="business__card--label">開発期間:</p>
+                    <p className="business__card--lead">{post.period}</p>
+                  </Link>
+                ))}
+              </>
+            ) : (
+              <h1 className="business__card--error">
+                プロジェクトがありません。
+              </h1>
+            )}
           </ul>
-          <Pagination />
+          <Pagination
+            id={Number(id)}
+            currentPage={currentPage}
+            paginationNumber={paginationNumber}
+            pageUrl={'business'}
+          />
         </div>
       </section>
       <Footer />

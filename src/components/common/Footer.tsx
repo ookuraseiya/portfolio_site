@@ -6,7 +6,9 @@ export const Footer = () => {
       <footer className="footer">
         <div className="footer__container">
           <ul className="footer__wrapper">
-            <li className="footer__link">© 2024 Seiya's portfolio site</li>
+            <li className="footer__link footer__link--unHover">
+              © 2024 Seiya's portfolio site
+            </li>
             <li className="footer__link">
               <Link to={'https://github.com/ookuraseiya'}>github</Link>
             </li>

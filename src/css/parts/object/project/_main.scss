@@ -12,6 +12,7 @@
   &__title {
     font-weight: bold;
     @include font50();
+    @include color();
   }
 
   &__wrapper {
@@ -19,6 +20,14 @@
   }
 
   &__link {
+    width: 20%;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 1%;
     @include font28();
+    @include color();
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 }

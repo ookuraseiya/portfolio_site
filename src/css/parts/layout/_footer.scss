@@ -15,6 +15,15 @@
   }
 
   &__link {
+    transition: transform 0.3s ease-in-out;
     @include font20();
+    &:hover {
+      transform: translateY(-3px);
+    }
+    &--unHover {
+      &:hover {
+        transform: none;
+      }
+    }
   }
 }

@@ -1,18 +1,40 @@
 import { Link } from 'react-router-dom';
 
-export const Pagination = () => {
+type PaginationProps = {
+  id: number;
+  currentPage: number;
+  paginationNumber: number;
+  pageUrl: string;
+};
+
+export const Pagination = ({
+  id,
+  currentPage,
+  paginationNumber,
+  pageUrl,
+}: PaginationProps) => {
   return (
     <>
       <section className="pagination">
         <ul className="pagination__list">
-          <li className="pagination__link">
-            <Link className="pagination__href" to={''}>
+          <li
+            className={id === 1 ? 'pagination__disabled' : 'pagination__link'}
+          >
+            <Link className="pagination__href" to={`/${pageUrl}/${id - 1}`}>
               &lt;
             </Link>
           </li>
-          <li className="pagination__position">1 / 2</li>
-          <li className="pagination__link">
-            <Link className="pagination__href" to={''}>
+          <li className="pagination__position">
+            {currentPage} / {paginationNumber}
+          </li>
+          <li
+            className={
+              id === paginationNumber
+                ? 'pagination__disabled'
+                : 'pagination__link'
+            }
+          >
+            <Link className="pagination__href" to={`/${pageUrl}/${id + 1}`}>
               &gt;
             </Link>
           </li>

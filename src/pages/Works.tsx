@@ -13,7 +13,7 @@ export const Works = () => {
           <div className="works__wrapper">
             <Link
               className="works__card works__card--personal"
-              to={'/personal'}
+              to={'/personal/1'}
             >
               <div className="works__card--wrapper">
                 <h1 className="works__card--heading">Personal development</h1>
@@ -24,7 +24,7 @@ export const Works = () => {
             </Link>
             <Link
               className="works__card works__card--business"
-              to={'/business'}
+              to={'/business/1'}
             >
               <div className="works__card--wrapper">
                 <h1 className="works__card--heading">Business development</h1>

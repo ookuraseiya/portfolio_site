@@ -13,7 +13,7 @@ export const Skill = () => {
               <thead>
                 <tr>
                   <th>技術</th>
-                  <th>経験年数</th>
+                  <th>経験期間</th>
                 </tr>
               </thead>
               <tbody>
@@ -53,7 +53,7 @@ export const Skill = () => {
               <thead>
                 <tr>
                   <th>技術</th>
-                  <th>経験年数</th>
+                  <th>経験期間</th>
                 </tr>
               </thead>
               <tbody>
@@ -89,7 +89,7 @@ export const Skill = () => {
               <thead>
                 <tr>
                   <th>技術</th>
-                  <th>経験年数</th>
+                  <th>経験期間</th>
                 </tr>
               </thead>
               <tbody>
@@ -109,7 +109,7 @@ export const Skill = () => {
               <thead>
                 <tr>
                   <th>技術</th>
-                  <th>経験年数</th>
+                  <th>経験期間</th>
                 </tr>
               </thead>
               <tbody>
