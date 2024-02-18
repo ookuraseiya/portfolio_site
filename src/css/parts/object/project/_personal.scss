@@ -65,6 +65,15 @@
     transition: transform 0.3s ease-in-out;
     &:hover {
       transform: translateY(-3px);
+      @include responsive(xl) {
+        transform: none;
+      }
+    }
+
+    &:active {
+      @include responsive(xl) {
+        transform: translateY(-3px);
+      }
     }
 
     @include responsive(sm) {

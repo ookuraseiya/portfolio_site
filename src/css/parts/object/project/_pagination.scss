@@ -1,6 +1,10 @@
 .pagination {
   margin: 3% 0;
   @include font18();
+  @include responsive(sm) {
+    margin-top: 10%;
+    @include font20();
+  }
   &__list {
     display: flex;
     justify-content: center;

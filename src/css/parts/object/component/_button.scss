@@ -11,5 +11,14 @@
   @include button-background-color();
   &:hover {
     transform: translateY(-3px);
+    @include responsive(xl) {
+      transform: none;
+    }
+  }
+
+  &:active {
+    @include responsive(xl) {
+      transform: translateY(-3px);
+    }
   }
 }

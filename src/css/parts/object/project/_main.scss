@@ -14,7 +14,7 @@
     @include font50();
     @include color();
     @include responsive(sm) {
-      @include font34();
+      @include font30();
       @include responsive(xs) {
         @include font28();
       }
@@ -34,6 +34,15 @@
     @include color();
     &:hover {
       transform: translateY(-3px);
+      @include responsive(xl) {
+        transform: none;
+      }
+    }
+
+    &:active {
+      @include responsive(xl) {
+        transform: translateY(-3px);
+      }
     }
     @include responsive(sm) {
       @include font20();
