@@ -1283,13 +1283,7 @@ template {
     margin: auto;
   }
 }
-@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) and (max-width: 1024px) {
-  .personalDetails__richEditor table img {
-    margin: 5% 0;
-    width: 100vh;
-  }
-}
-@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) and (max-width: 1024px) and (max-width: 576px) {
+@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) and (max-width: 576px) {
   .personalDetails__richEditor table img {
     width: 100%;
     height: 60%;
@@ -1305,7 +1299,7 @@ template {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 576px) {
   .personalDetails__richEditor tr {
     flex-direction: column;
   }
