@@ -10,6 +10,9 @@ export const Profile = () => {
                 className="profile__image--layout"
                 src={'/images/profile-image.webp'}
                 alt="profile image"
+                height={''}
+                width={''}
+                loading="lazy"
               />
             </div>
             <p className="profile__text">

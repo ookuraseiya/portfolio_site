@@ -75,6 +75,9 @@ export const Personal = () => {
                           className="personal__card--image"
                           src={post.image.url}
                           alt="これまで個人で開発してきたプロダクトの画像"
+                          height={''}
+                          width={''}
+                          loading="lazy"
                         />
                         <p className="personal__card--lead">{post.name}</p>
                       </Link>
