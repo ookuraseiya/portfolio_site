@@ -719,6 +719,23 @@ template {
     font-size: 1.4em;
   }
 }
+.business__card--error {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+}
+@media screen and (max-width: 576px) {
+  .business__card--error {
+    font-size: 2.6em;
+  }
+}
+@media screen and (max-width: 576px) and (max-width: 375px) {
+  .business__card--error {
+    font-size: 2em;
+  }
+}
 
 .businessDetails {
   margin: 5% 0;
@@ -988,7 +1005,7 @@ template {
   color: #fff;
   background-color: #434343;
   border-radius: 5px;
-  border: 1px solid #434343;
+  border: 1px solid #9f9b96;
 }
 @media screen and (max-width: 1024px) {
   .pagination__link {
@@ -1114,6 +1131,8 @@ template {
 }
 .personal__card--image {
   width: 100%;
+  border-radius: 5px;
+  border: 1px solid #9f9b96;
 }
 .personal__card--lead {
   text-align: center;

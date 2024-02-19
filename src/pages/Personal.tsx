@@ -62,9 +62,10 @@ export const Personal = () => {
               <p className="personal__lead">
                 これまで個人で開発してきたプロダクトです
               </p>
-              <ul className="personal__wrapper">
-                {judge() ? (
-                  <>
+              {/* judge() が true の場合に表示 */}
+              {judge() && (
+                <>
+                  <ul className="personal__wrapper">
                     {posts.slice(firstPost, lastPost).map((post) => (
                       <Link
                         className="personal__card"
@@ -82,19 +83,22 @@ export const Personal = () => {
                         <p className="personal__card--lead">{post.name}</p>
                       </Link>
                     ))}
-                  </>
-                ) : (
-                  <h1 className="personal__card--error">
-                    プロダクトがありません。
-                  </h1>
-                )}
-              </ul>
-              <Pagination
-                id={Number(id)}
-                currentPage={currentPage}
-                paginationNumber={paginationNumber}
-                pageUrl={'personal'}
-              />
+                  </ul>
+                  <Pagination
+                    id={Number(id)}
+                    currentPage={currentPage}
+                    paginationNumber={paginationNumber}
+                    pageUrl={'personal'}
+                  />
+                </>
+              )}
+
+              {/* judge() が false の場合に表示 */}
+              {!judge() && (
+                <h1 className="personal__card--error">
+                  プロダクトがありません。
+                </h1>
+              )}
             </div>
           </section>
           <Footer />

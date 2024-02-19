@@ -62,9 +62,10 @@ export const Business = () => {
               <p className="business__lead">
                 これまで業務で携わってきたプロジェクトです
               </p>
-              <ul className="business__wrapper">
-                {judge() ? (
-                  <>
+
+              {judge() && (
+                <>
+                  <ul className="business__wrapper">
                     {posts.slice(firstPost, lastPost).map((post) => (
                       <Link
                         className="business__card"
@@ -77,19 +78,21 @@ export const Business = () => {
                         <p className="business__card--lead">{post.period}</p>
                       </Link>
                     ))}
-                  </>
-                ) : (
-                  <h1 className="business__card--error">
-                    プロジェクトがありません。
-                  </h1>
-                )}
-              </ul>
-              <Pagination
-                id={Number(id)}
-                currentPage={currentPage}
-                paginationNumber={paginationNumber}
-                pageUrl={'business'}
-              />
+                  </ul>
+                  <Pagination
+                    id={Number(id)}
+                    currentPage={currentPage}
+                    paginationNumber={paginationNumber}
+                    pageUrl={'business'}
+                  />
+                </>
+              )}
+
+              {!judge() && (
+                <h1 className="business__card--error">
+                  プロジェクトがありません。
+                </h1>
+              )}
             </div>
           </section>
           <Footer />

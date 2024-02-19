@@ -84,6 +84,7 @@
 
     &--image {
       width: 100%;
+      @include border();
     }
 
     &--lead {
