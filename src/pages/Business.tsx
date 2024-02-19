@@ -63,7 +63,7 @@ export const Business = () => {
                 これまで業務で携わってきたプロジェクトです
               </p>
 
-              {judge() && (
+              {judge() ? (
                 <>
                   <ul className="business__wrapper">
                     {posts.slice(firstPost, lastPost).map((post) => (
@@ -86,9 +86,7 @@ export const Business = () => {
                     pageUrl={'business'}
                   />
                 </>
-              )}
-
-              {!judge() && (
+              ) : (
                 <h1 className="business__card--error">
                   プロジェクトがありません。
                 </h1>

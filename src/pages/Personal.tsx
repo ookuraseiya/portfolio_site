@@ -62,8 +62,7 @@ export const Personal = () => {
               <p className="personal__lead">
                 これまで個人で開発してきたプロダクトです
               </p>
-              {/* judge() が true の場合に表示 */}
-              {judge() && (
+              {judge() ? (
                 <>
                   <ul className="personal__wrapper">
                     {posts.slice(firstPost, lastPost).map((post) => (
@@ -91,10 +90,7 @@ export const Personal = () => {
                     pageUrl={'personal'}
                   />
                 </>
-              )}
-
-              {/* judge() が false の場合に表示 */}
-              {!judge() && (
+              ) : (
                 <h1 className="personal__card--error">
                   プロダクトがありません。
                 </h1>
