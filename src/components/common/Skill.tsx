@@ -26,10 +26,6 @@ export const Skill = () => {
                   <td>3年</td>
                 </tr>
                 <tr>
-                  <td>GAS</td>
-                  <td>1年2ヵ月</td>
-                </tr>
-                <tr>
                   <td>JavaScript</td>
                   <td>1年</td>
                 </tr>
@@ -38,8 +34,12 @@ export const Skill = () => {
                   <td>1年</td>
                 </tr>
                 <tr>
+                  <td>GAS</td>
+                  <td>8ヵ月</td>
+                </tr>
+                <tr>
                   <td>TypeScript</td>
-                  <td>1年</td>
+                  <td>6ヵ月</td>
                 </tr>
                 <tr>
                   <td>Java</td>
@@ -58,8 +58,12 @@ export const Skill = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>React.js</td>
+                  <td>jQuery</td>
                   <td>10ヵ月</td>
+                </tr>
+                <tr>
+                  <td>React.js</td>
+                  <td>6ヵ月</td>
                 </tr>
                 <tr>
                   <td>Next.js</td>
@@ -75,10 +79,6 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>Tailwind css</td>
-                  <td>3ヵ月</td>
-                </tr>
-                <tr>
-                  <td>jQuery</td>
                   <td>3ヵ月</td>
                 </tr>
               </tbody>
@@ -115,11 +115,7 @@ export const Skill = () => {
               <tbody>
                 <tr>
                   <td>GitHub</td>
-                  <td>2年4ヵ月</td>
-                </tr>
-                <tr>
-                  <td>Micro CMS</td>
-                  <td>1年2ヵ月</td>
+                  <td>2年</td>
                 </tr>
                 <tr>
                   <td>WordPress</td>
@@ -127,11 +123,15 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>IIS</td>
-                  <td>10ヵ月</td>
+                  <td>9ヵ月</td>
+                </tr>
+                <tr>
+                  <td>Micro CMS</td>
+                  <td>6ヵ月</td>
                 </tr>
                 <tr>
                   <td>AWS(EC2, S3等)</td>
-                  <td>6ヵ月</td>
+                  <td>2ヵ月</td>
                 </tr>
               </tbody>
             </table>
