@@ -58,6 +58,7 @@
 
     .fontStyle__p {
       margin: 2% 0 4% 0;
+      font-weight: normal;
       @include color();
       @include font18();
       @include responsive(sm) {
@@ -149,9 +150,8 @@
       }
     }
 
-    th p {
+    th td p {
       width: 100%;
-      font-weight: normal;
       text-align: left;
       @extend .fontStyle__p;
       // @include responsive(xxxxxl) {

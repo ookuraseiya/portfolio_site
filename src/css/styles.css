@@ -783,24 +783,24 @@ template {
     padding: 6%;
   }
 }
-.businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
+.businessDetails__richEditor .fontStyle__p, .businessDetails__richEditor .personalDetails__richEditor th td p, .personalDetails__richEditor th td .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
   margin: 2% 0 4% 0;
   color: #434343;
   font-size: 2em;
 }
 @media screen and (max-width: 1400px) {
-  .businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
+  .businessDetails__richEditor .fontStyle__p, .businessDetails__richEditor .personalDetails__richEditor th td p, .personalDetails__richEditor th td .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
     margin: 2% 0 3% 0;
     font-size: 1.8em;
   }
 }
 @media screen and (max-width: 1400px) and (max-width: 576px) {
-  .businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
+  .businessDetails__richEditor .fontStyle__p, .businessDetails__richEditor .personalDetails__richEditor th td p, .personalDetails__richEditor th td .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
     font-size: 1.4em;
   }
 }
 @media screen and (max-width: 1400px) and (max-width: 576px) and (max-width: 375px) {
-  .businessDetails__richEditor .fontStyle__p, .personalDetails__richEditor th .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
+  .businessDetails__richEditor .fontStyle__p, .businessDetails__richEditor .personalDetails__richEditor th td p, .personalDetails__richEditor th td .businessDetails__richEditor p, .businessDetails__richEditor th p, .businessDetails__richEditor p {
     font-size: 1.2em;
   }
 }
@@ -1211,18 +1211,19 @@ template {
     padding: 6%;
   }
 }
-.personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th p, .personalDetails__richEditor p {
+.personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th td p, .personalDetails__richEditor p {
   margin: 2% 0 4% 0;
+  font-weight: normal;
   color: #434343;
   font-size: 1.8em;
 }
 @media screen and (max-width: 576px) {
-  .personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th p, .personalDetails__richEditor p {
+  .personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th td p, .personalDetails__richEditor p {
     font-size: 1.4em;
   }
 }
 @media screen and (max-width: 576px) and (max-width: 375px) {
-  .personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th p, .personalDetails__richEditor p {
+  .personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th td p, .personalDetails__richEditor p {
     font-size: 1.2em;
   }
 }
@@ -1300,13 +1301,12 @@ template {
     width: 100%;
   }
 }
-.personalDetails__richEditor th p {
+.personalDetails__richEditor th td p {
   width: 100%;
-  font-weight: normal;
   text-align: left;
 }
 @media screen and (max-width: 1024px) {
-  .personalDetails__richEditor th p {
+  .personalDetails__richEditor th td p {
     width: 100%;
   }
 }
