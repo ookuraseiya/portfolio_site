@@ -1214,6 +1214,7 @@ template {
 .personalDetails__richEditor .fontStyle__p, .personalDetails__richEditor th td p, .personalDetails__richEditor p {
   margin: 2% 0 4% 0;
   font-weight: normal;
+  overflow-wrap: break-word;
   color: #434343;
   font-size: 1.8em;
 }
