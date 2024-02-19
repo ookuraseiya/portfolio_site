@@ -1259,31 +1259,16 @@ template {
   font-size: 1.6em;
 }
 .personalDetails__richEditor table img {
-  width: 320px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
 }
-@media screen and (max-width: 1700px) {
-  .personalDetails__richEditor table img {
-    width: 275px;
-  }
-}
-@media screen and (max-width: 1700px) and (max-width: 1600px) {
-  .personalDetails__richEditor table img {
-    width: 255px;
-  }
-}
-@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) {
-  .personalDetails__richEditor table img {
-    width: 235px;
-  }
-}
-@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .personalDetails__richEditor table img {
     width: 90%;
     margin: auto;
   }
 }
-@media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1500px) and (max-width: 1400px) and (max-width: 576px) {
+@media screen and (max-width: 1400px) and (max-width: 576px) {
   .personalDetails__richEditor table img {
     width: 100%;
     height: 60%;
@@ -1295,6 +1280,7 @@ template {
   margin-bottom: 5%;
 }
 .personalDetails__richEditor tr {
+  margin-bottom: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1304,25 +1290,22 @@ template {
     flex-direction: column;
   }
 }
+.personalDetails__richEditor th,
+.personalDetails__richEditor td {
+  width: 48%;
+}
+@media screen and (max-width: 576px) {
+  .personalDetails__richEditor th,
+  .personalDetails__richEditor td {
+    width: 100%;
+  }
+}
 .personalDetails__richEditor th p {
-  width: 520px;
+  width: 100%;
+  font-weight: normal;
+  text-align: left;
 }
-@media screen and (max-width: 1500px) {
-  .personalDetails__richEditor th p {
-    width: 370px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) {
-  .personalDetails__richEditor th p {
-    width: 330px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
-  .personalDetails__richEditor th p {
-    width: 300px;
-  }
-}
-@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .personalDetails__richEditor th p {
     width: 100%;
   }
