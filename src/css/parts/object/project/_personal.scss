@@ -42,10 +42,9 @@
 
   &__wrapper {
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: normal;
     @include flex();
     @include container();
+    align-items: flex-start;
     &::after {
       content: '';
       display: block;
