@@ -4,9 +4,10 @@ typescriptをメインに使用して、念願の自分のポートフォリオ�
 
 <br>
 
-# システム概要（近頃上げます。）
+# システム概要
 
 以下の URL が本番環境に上げたものです。
+詳しは以下のポートフォリオサイトをご覧ください。
 
 [seiya-portfolio-site.netlify.app](https://seiya-portfolio-site.netlify.app)
 
