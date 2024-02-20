@@ -69,10 +69,15 @@
       }
     }
 
+    tr {
+      width: 100%;
+    }
+
     th {
       text-align: center;
       border: none;
       padding-bottom: 6%;
+      width: 50%;
       @include font20();
       @include responsive(xl) {
         @include font18();
@@ -85,6 +90,7 @@
     td {
       border: none;
       padding-bottom: 6%;
+      width: 50%;
       @include font16();
       @include responsive(xl) {
         @include font14();

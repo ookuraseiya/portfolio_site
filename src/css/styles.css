@@ -1541,10 +1541,14 @@ template {
     font-size: 1.4em;
   }
 }
+.skill__table tr {
+  width: 100%;
+}
 .skill__table th {
   text-align: center;
   border: none;
   padding-bottom: 6%;
+  width: 50%;
   font-size: 2em;
 }
 @media screen and (max-width: 1024px) {
@@ -1560,6 +1564,7 @@ template {
 .skill__table td {
   border: none;
   padding-bottom: 6%;
+  width: 50%;
   font-size: 1.6em;
 }
 @media screen and (max-width: 1024px) {
