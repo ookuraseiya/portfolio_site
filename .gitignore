@@ -12,7 +12,8 @@ dist
 dist-ssr
 *.local
 tests
-jest.config.js
+jest.config.ts
+jest.setup.ts
 
 # Editor directories and files
 .vscode/*
