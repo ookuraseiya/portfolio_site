@@ -7,7 +7,6 @@ import { Business } from './pages/Business';
 import { PersonalDetails } from './pages/PersonalDetails';
 import { BusinessDetails } from './pages/BusinessDetails';
 import { NotFoundPage } from './pages/404';
-import './css/styles.css';
 
 function App() {
   return (
