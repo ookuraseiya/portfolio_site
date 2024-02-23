@@ -1,7 +1,7 @@
 export const Profile = () => {
   return (
     <>
-      <section className="profile">
+      <section className="profile" data-testid="profile">
         <div className="profile__container">
           <h1 className="profile__title">About</h1>
           <div className="profile__wrapper">

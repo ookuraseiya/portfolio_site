@@ -4,7 +4,7 @@ import { Footer } from '../components/common/Footer';
 export const Main = () => {
   return (
     <>
-      <section className="main">
+      <section className="main" data-testid="main">
         <div className="main__container">
           <h1 className="main__title">Seiya's portfolio site</h1>
           <ul className="main__wrapper">

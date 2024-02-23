@@ -5,6 +5,7 @@ import { Header } from '../components/common/Header';
 import { Pagination } from '../components/utility/Pagination';
 import { PersonalType } from '../components/utility/type/PersonalType';
 import { Loading } from '../components/animetions/Loading';
+import { Judge } from '../components/utility/Judge';
 
 export const Personal = () => {
   let { id } = useParams();
@@ -28,6 +29,11 @@ export const Personal = () => {
       .then((data) => {
         setPosts(data.contents);
         setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setPosts([]);
+        setLoading(false);
       });
   }, []);
 
@@ -35,19 +41,14 @@ export const Personal = () => {
     setCurrentPage(Number(id));
   }, [id]);
 
-  const PER_PAGE: number = 9;
-  const lastPost: number = currentPage * PER_PAGE;
-  const firstPost: number = lastPost - PER_PAGE;
-  const totalPosts: number = posts.length;
-  const paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
-
-  const judge = () => {
-    if (1 > Number(id) || paginationNumber < Number(id) || isNaN(Number(id))) {
-      return false;
-    } else {
-      return true;
-    }
-  };
+  let PER_PAGE: number = 9;
+  let lastPost: number = currentPage * PER_PAGE;
+  let firstPost: number = lastPost - PER_PAGE;
+  let totalPosts: number = 1;
+  if (posts) {
+    totalPosts = posts.length;
+  }
+  let paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
 
   return (
     <>
@@ -62,7 +63,7 @@ export const Personal = () => {
               <p className="personal__lead">
                 これまで個人で開発してきたプロダクトです
               </p>
-              {judge() ? (
+              {Judge(Number(id), paginationNumber) ? (
                 <>
                   <ul className="personal__wrapper">
                     {posts.slice(firstPost, lastPost).map((post) => (

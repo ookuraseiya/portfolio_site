@@ -15,7 +15,7 @@ export const Pagination = ({
 }: PaginationProps) => {
   return (
     <>
-      <section className="pagination">
+      <section className="pagination" data-testid="pagination">
         <ul className="pagination__list">
           <li
             className={id === 1 ? 'pagination__disabled' : 'pagination__link'}

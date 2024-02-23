@@ -6,7 +6,7 @@ export const Works = () => {
   return (
     <>
       <Header />
-      <section className="works">
+      <section className="works" data-testid="works">
         <div className="works__container">
           <h1 className="works__title">Works</h1>
           <p className="works__lead">これまで開発してきたプロダクト達です</p>
@@ -29,7 +29,7 @@ export const Works = () => {
               <div className="works__card--wrapper">
                 <h1 className="works__card--heading">Business development</h1>
                 <p className="works__card--lead">
-                  これまで業務で開発してきたプロダクトです
+                  これまで業務で携わってきたプロジェクトです
                 </p>
               </div>
             </Link>

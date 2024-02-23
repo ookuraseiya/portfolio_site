@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <>
       <ScrollTop />
-      <footer className="footer">
+      <footer className="footer" data-testid="footer">
         <div className="footer__container">
           <ul className="footer__wrapper">
             <li className="footer__link footer__link--unHover">

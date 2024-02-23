@@ -5,6 +5,7 @@ import { Header } from '../components/common/Header';
 import { Pagination } from '../components/utility/Pagination';
 import { BusinessType } from '../components/utility/type/BusinessType';
 import { Loading } from '../components/animetions/Loading';
+import { Judge } from '../components/utility/Judge';
 
 export const Business = () => {
   let { id } = useParams();
@@ -28,6 +29,11 @@ export const Business = () => {
       .then((data) => {
         setPosts(data.contents);
         setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setPosts([]);
+        setLoading(false);
       });
   }, []);
 
@@ -35,19 +41,15 @@ export const Business = () => {
     setCurrentPage(Number(id));
   }, [id]);
 
-  const PER_PAGE: number = 9;
-  const lastPost: number = currentPage * PER_PAGE;
-  const firstPost: number = lastPost - PER_PAGE;
-  const totalPosts: number = posts.length;
-  const paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
+  let PER_PAGE: number = 9;
+  let lastPost: number = currentPage * PER_PAGE;
+  let firstPost: number = lastPost - PER_PAGE;
+  let totalPosts: number = 1;
+  if (posts) {
+    totalPosts = posts.length;
+  }
 
-  const judge = () => {
-    if (1 > Number(id) || paginationNumber < Number(id) || isNaN(Number(id))) {
-      return false;
-    } else {
-      return true;
-    }
-  };
+  let paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
 
   return (
     <>
@@ -63,7 +65,7 @@ export const Business = () => {
                 これまで業務で携わってきたプロジェクトです
               </p>
 
-              {judge() ? (
+              {Judge(Number(id), paginationNumber) ? (
                 <>
                   <ul className="business__wrapper">
                     {posts.slice(firstPost, lastPost).map((post) => (

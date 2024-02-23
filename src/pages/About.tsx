@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
       <Header />
-      <section className="about">
+      <section className="about" data-testid="about">
         <div className="about__container">
           <Profile />
           <Skill />

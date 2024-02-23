@@ -1,0 +1,1724 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404コンポーネントのテスト 404ページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+    data-testid="header"
+  >
+    <div
+      class="header__container"
+    >
+      <ul
+        class="header__wrapper"
+      >
+        <li
+          class="header__link"
+        >
+          <a
+            href="/"
+          >
+            home
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/works"
+          >
+            works
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section
+    class="notFound"
+    data-testid="404"
+  >
+    <div
+      class="notFound__container"
+    >
+      <h1
+        class="notFound__title"
+      >
+        ページは存在しません
+      </h1>
+      <div
+        class="notFound__button"
+      >
+        <a
+          href="/"
+        >
+          <button
+            class="notFound__button--layout"
+          >
+            トップページに戻る
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer
+    class="footer"
+    data-testid="footer"
+  >
+    <div
+      class="footer__container"
+    >
+      <ul
+        class="footer__wrapper"
+      >
+        <li
+          class="footer__link footer__link--unHover"
+        >
+          © 2024 Seiya's portfolio site
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="https://github.com/ookuraseiya"
+          >
+            github
+          </a>
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="mailto:seiya.ookura@gmail.com?"
+          >
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Aboutコンポーネントのテスト Aboutページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+    data-testid="header"
+  >
+    <div
+      class="header__container"
+    >
+      <ul
+        class="header__wrapper"
+      >
+        <li
+          class="header__link"
+        >
+          <a
+            href="/"
+          >
+            home
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/works"
+          >
+            works
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section
+    class="about"
+    data-testid="about"
+  >
+    <div
+      class="about__container"
+    >
+      <section
+        class="profile"
+        data-testid="profile"
+      >
+        <div
+          class="profile__container"
+        >
+          <h1
+            class="profile__title"
+          >
+            About
+          </h1>
+          <div
+            class="profile__wrapper"
+          >
+            <div
+              class="profile__image"
+            >
+              <img
+                alt="profile image"
+                class="profile__image--layout"
+                height=""
+                loading="lazy"
+                src="/images/profile-image.webp"
+                width=""
+              />
+            </div>
+            <p
+              class="profile__text"
+            >
+              初めまして大倉聖也と言います。大阪にある情報系の学部に通っている大学4年生（2024/02/16 現在）です。現在は、中小IT企業でWeb制作・開発や社内システム開発に携わっています。最近の業務ではjavaとSpring Bootsを個人ではReactとTypeScrptをよく触っています。
+              <br />
+              <br />
+              主な経歴：
+              <br />
+              ・2021/02 ~ 2023/06：
+              <br />
+              Web系のスタートアップ企業でインターン（アルバイト）入社。主にWeb制作・開発や社内システム開発に携わった。
+              <br />
+              ・2022/06 ~ 2024/02（今現在）：
+              <br />
+              中小IT企業でインターン（アルバイト）入社。主にWeb制作・開発や社内システム開発に携わった。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="skill"
+        data-testid="skill"
+      >
+        <div
+          class="skill__container"
+        >
+          <h1
+            class="skill__title"
+          >
+            Skill
+          </h1>
+          <p
+            class="skill__lead"
+          >
+            実際に業務で使用した年数を記述しています
+          </p>
+          <div
+            class="skill__wrapper"
+          >
+            <table
+              class="skill__table"
+            >
+              <caption>
+                言語
+              </caption>
+              <thead>
+                <tr>
+                  <th>
+                    技術
+                  </th>
+                  <th>
+                    経験期間
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    HTML
+                  </td>
+                  <td>
+                    3年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    SCSS(CSS)
+                  </td>
+                  <td>
+                    3年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    JavaScript
+                  </td>
+                  <td>
+                    1年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    PHP
+                  </td>
+                  <td>
+                    1年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    GAS
+                  </td>
+                  <td>
+                    8ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    TypeScript
+                  </td>
+                  <td>
+                    6ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Java
+                  </td>
+                  <td>
+                    6ヵ月
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="skill__table"
+            >
+              <caption>
+                ライブラリ・フレームワーク
+              </caption>
+              <thead>
+                <tr>
+                  <th>
+                    技術
+                  </th>
+                  <th>
+                    経験期間
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    jQuery
+                  </td>
+                  <td>
+                    10ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    React.js
+                  </td>
+                  <td>
+                    6ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Next.js
+                  </td>
+                  <td>
+                    6ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Spring Boots
+                  </td>
+                  <td>
+                    6ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Three.js
+                  </td>
+                  <td>
+                    3ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tailwind css
+                  </td>
+                  <td>
+                    3ヵ月
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="skill__table"
+            >
+              <caption>
+                データベース
+              </caption>
+              <thead>
+                <tr>
+                  <th>
+                    技術
+                  </th>
+                  <th>
+                    経験期間
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    MySQL
+                  </td>
+                  <td>
+                    1年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    SQLite
+                  </td>
+                  <td>
+                    2ヵ月
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="skill__table"
+            >
+              <caption>
+                その他
+              </caption>
+              <thead>
+                <tr>
+                  <th>
+                    技術
+                  </th>
+                  <th>
+                    経験期間
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    GitHub
+                  </td>
+                  <td>
+                    2年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    WordPress
+                  </td>
+                  <td>
+                    1年
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    IIS
+                  </td>
+                  <td>
+                    9ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Micro CMS
+                  </td>
+                  <td>
+                    6ヵ月
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    AWS(EC2, S3等)
+                  </td>
+                  <td>
+                    2ヵ月
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <footer
+    class="footer"
+    data-testid="footer"
+  >
+    <div
+      class="footer__container"
+    >
+      <ul
+        class="footer__wrapper"
+      >
+        <li
+          class="footer__link footer__link--unHover"
+        >
+          © 2024 Seiya's portfolio site
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="https://github.com/ookuraseiya"
+          >
+            github
+          </a>
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="mailto:seiya.ookura@gmail.com?"
+          >
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`BusinessDetailsコンポーネントのテスト BusinessDetailsコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #434343; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Businessコンポーネントのテスト Businessコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #434343; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Footerコンポーネントのテスト Footerページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+    data-testid="footer"
+  >
+    <div
+      class="footer__container"
+    >
+      <ul
+        class="footer__wrapper"
+      >
+        <li
+          class="footer__link footer__link--unHover"
+        >
+          © 2024 Seiya's portfolio site
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="https://github.com/ookuraseiya"
+          >
+            github
+          </a>
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="mailto:seiya.ookura@gmail.com?"
+          >
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Headerコンポーネントのテスト Headerページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+    data-testid="header"
+  >
+    <div
+      class="header__container"
+    >
+      <ul
+        class="header__wrapper"
+      >
+        <li
+          class="header__link"
+        >
+          <a
+            href="/"
+          >
+            home
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/works"
+          >
+            works
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`Mainコンポーネントのテスト Mainページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <section
+    class="main"
+    data-testid="main"
+  >
+    <div
+      class="main__container"
+    >
+      <h1
+        class="main__title"
+      >
+        Seiya's portfolio site
+      </h1>
+      <ul
+        class="main__wrapper"
+      >
+        <li
+          class="main__link"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li
+          class="main__link"
+        >
+          <a
+            href="/works"
+          >
+            works
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer
+    class="footer"
+    data-testid="footer"
+  >
+    <div
+      class="footer__container"
+    >
+      <ul
+        class="footer__wrapper"
+      >
+        <li
+          class="footer__link footer__link--unHover"
+        >
+          © 2024 Seiya's portfolio site
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="https://github.com/ookuraseiya"
+          >
+            github
+          </a>
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="mailto:seiya.ookura@gmail.com?"
+          >
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Paginationコンポーネントのテスト Paginationコンポーネントのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <section
+    class="pagination"
+    data-testid="pagination"
+  >
+    <ul
+      class="pagination__list"
+    >
+      <li
+        class="pagination__disabled"
+      >
+        <a
+          class="pagination__href"
+          href="/test/0"
+        >
+          &lt;
+        </a>
+      </li>
+      <li
+        class="pagination__position"
+      >
+        1 / 10
+      </li>
+      <li
+        class="pagination__link"
+      >
+        <a
+          class="pagination__href"
+          href="/test/2"
+        >
+          &gt;
+        </a>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`PersonalDetailsコンポーネントのテスト PersonalDetailsコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #434343; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Personalコンポーネントのテスト Personalコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #434343; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Worksコンポーネントのテスト Worksページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+    data-testid="header"
+  >
+    <div
+      class="header__container"
+    >
+      <ul
+        class="header__wrapper"
+      >
+        <li
+          class="header__link"
+        >
+          <a
+            href="/"
+          >
+            home
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li
+          class="header__link"
+        >
+          <a
+            href="/works"
+          >
+            works
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section
+    class="works"
+    data-testid="works"
+  >
+    <div
+      class="works__container"
+    >
+      <h1
+        class="works__title"
+      >
+        Works
+      </h1>
+      <p
+        class="works__lead"
+      >
+        これまで開発してきたプロダクト達です
+      </p>
+      <div
+        class="works__wrapper"
+      >
+        <a
+          class="works__card works__card--personal"
+          href="/personal/1"
+        >
+          <div
+            class="works__card--wrapper"
+          >
+            <h1
+              class="works__card--heading"
+            >
+              Personal development
+            </h1>
+            <p
+              class="works__card--lead"
+            >
+              これまで個人で開発してきたプロダクトです
+            </p>
+          </div>
+        </a>
+        <a
+          class="works__card works__card--business"
+          href="/business/1"
+        >
+          <div
+            class="works__card--wrapper"
+          >
+            <h1
+              class="works__card--heading"
+            >
+              Business development
+            </h1>
+            <p
+              class="works__card--lead"
+            >
+              これまで業務で開発してきたプロダクトです
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer
+    class="footer"
+    data-testid="footer"
+  >
+    <div
+      class="footer__container"
+    >
+      <ul
+        class="footer__wrapper"
+      >
+        <li
+          class="footer__link footer__link--unHover"
+        >
+          © 2024 Seiya's portfolio site
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="https://github.com/ookuraseiya"
+          >
+            github
+          </a>
+        </li>
+        <li
+          class="footer__link"
+        >
+          <a
+            href="mailto:seiya.ookura@gmail.com?"
+          >
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

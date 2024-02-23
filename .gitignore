@@ -25,4 +25,3 @@ jest.setup.js
 *.sln
 *.sw?
 src/memo.txt
-tests/App.spec.tsx

@@ -1,7 +1,7 @@
 export const Skill = () => {
   return (
     <>
-      <section className="skill">
+      <section className="skill" data-testid="skill">
         <div className="skill__container">
           <h1 className="skill__title">Skill</h1>
           <p className="skill__lead">
@@ -43,6 +43,10 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>Java</td>
+                  <td>6ヵ月</td>
+                </tr>
+                <tr>
+                  <td>PowerShell</td>
                   <td>6ヵ月</td>
                 </tr>
               </tbody>

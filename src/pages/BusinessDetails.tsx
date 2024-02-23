@@ -38,7 +38,7 @@ export const BusinessDetails = () => {
       ) : (
         <>
           <Header />
-          <section className="businessDetails">
+          <section className="businessDetails" data-testid="businessDetals">
             <div className="businessDetails__container">
               <h1 className="businessDetails__title">Details</h1>
               <p className="businessDetails__lead">

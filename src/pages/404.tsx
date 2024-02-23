@@ -6,7 +6,7 @@ export const NotFoundPage = () => {
   return (
     <>
       <Header />
-      <section className="notFound">
+      <section className="notFound" data-testid="404">
         <div className="notFound__container">
           <h1 className="notFound__title">ページは存在しません</h1>
           <div className="notFound__button">
