@@ -20,7 +20,7 @@ typescriptをメインに使用して、念願の自分のポートフォリオ�
 - TypeScript
 - React.js
 - Visual Studio Code
-- vite
+- Vite
 - Windows
 - MicroCMS
 - Github
