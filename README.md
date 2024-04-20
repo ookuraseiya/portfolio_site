@@ -7,7 +7,7 @@ typescriptをメインに使用して、念願の自分のポートフォリオ�
 # システム概要
 
 以下の URL が本番環境に上げたものです。
-詳しは以下のポートフォリオサイトをご覧ください。
+詳しくは以下のポートフォリオサイトをご覧ください。
 
 [seiya-portfolio-site.netlify.app](https://seiya-portfolio-site.netlify.app)
 
@@ -20,7 +20,7 @@ typescriptをメインに使用して、念願の自分のポートフォリオ�
 - TypeScript
 - React.js
 - Visual Studio Code
-- vite
+- Vite
 - Windows
 - MicroCMS
 - Github
