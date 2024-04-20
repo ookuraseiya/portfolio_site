@@ -45,10 +45,6 @@ export const Skill = () => {
                   <td>Java</td>
                   <td>6ヵ月</td>
                 </tr>
-                <tr>
-                  <td>PowerShell</td>
-                  <td>6ヵ月</td>
-                </tr>
               </tbody>
             </table>
 
@@ -131,6 +127,10 @@ export const Skill = () => {
                 </tr>
                 <tr>
                   <td>Micro CMS</td>
+                  <td>6ヵ月</td>
+                </tr>
+                <tr>
+                  <td>PowerShell</td>
                   <td>6ヵ月</td>
                 </tr>
                 <tr>

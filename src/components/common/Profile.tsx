@@ -17,8 +17,8 @@ export const Profile = () => {
             </div>
             <p className="profile__text">
               初めまして大倉聖也と言います。大阪にある情報系の学部に通っている大学4年生（2024/02/16
-              現在）です。現在は、中小IT企業でWeb制作・開発や社内システム開発に携わっています。最近の業務ではjavaとSpring
-              Bootsを個人ではReactとTypeScrptをよく触っています。
+              現在）です。現在は、中小IT企業でWeb制作・開発や社内システム開発に携わっています。最近の業務ではJavaとSpring
+              Bootsを個人ではReactとTypeScriptをよく触っています。
               <br />
               <br />
               主な経歴：
