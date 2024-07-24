@@ -8,10 +8,10 @@ export const Profile = () => {
             <div className="profile__image">
               <img
                 className="profile__image--layout"
-                src={'/images/profile-image.webp'}
+                src={"/images/profile-image.webp"}
                 alt="profile image"
-                height={''}
-                width={''}
+                height={""}
+                width={""}
                 loading="lazy"
               />
             </div>

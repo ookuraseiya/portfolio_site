@@ -1,39 +1,31 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Footer } from '../components/common/Footer';
-import { Header } from '../components/common/Header';
-import { BusinessType } from '../components/utility/type/BusinessType';
-import { Loading } from '../components/animetions/Loading';
+import { Link } from 'react-router-dom';
+import { Footer } from '../layouts/Footer/Footer';
+import { Header } from '../layouts/Header/Header';
+import { BusinessType } from '../types/BusinessType';
+import { Loading } from '../components/Animation/Loading';
+import { useFetchPostId } from '../hooks/useFetchPostId';
+import { useFetchPostsData } from '../hooks/useFetchPostsData';
+import {
+  ACQUISITION_CONDITION,
+  API,
+  BUSINESS_END_POINT,
+  DOMAIN,
+} from '../constants/api';
 
 export const BusinessDetails = () => {
-  let { id } = useParams();
-  const [posts, setPosts] = useState<BusinessType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const currentPageId = useFetchPostId();
 
-  useEffect(() => {
-    fetch(
-      `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
-        import.meta.env.VITE_MICROCMS_ENDPOINT_BUSINESS
-      )}?limit=100&orders=-publishedAt`,
-      {
-        headers: {
-          'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),
-        },
-        method: 'GET',
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(
-          data.contents.filter((data: { id: string }) => data.id === String(id))
-        );
-        setLoading(false);
-      });
-  }, [id]);
+  const { postsData, isLoading } = useFetchPostsData<BusinessType>(
+    DOMAIN,
+    BUSINESS_END_POINT,
+    ACQUISITION_CONDITION,
+    API,
+    currentPageId
+  );
 
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
@@ -44,8 +36,8 @@ export const BusinessDetails = () => {
               <p className="businessDetails__lead">
                 選択したプロジェクトの詳細です
               </p>
-              <ul className="businessDetails__wrapper">
-                {posts.map((post) => (
+              <div className="businessDetails__wrapper">
+                {postsData.map((post) => (
                   <div className="businessDetails__richEditor" key={post.id}>
                     <div
                       dangerouslySetInnerHTML={{
@@ -54,15 +46,15 @@ export const BusinessDetails = () => {
                     ></div>
                   </div>
                 ))}
-                <div className="businessDetails__button">
-                  <Link
-                    to={'/business/1'}
-                    className="businessDetails__button--layout"
-                  >
-                    一覧に戻る
-                  </Link>
-                </div>
-              </ul>
+              </div>
+              <div className="businessDetails__button">
+                <Link
+                  to={'/business/1'}
+                  className="businessDetails__button--layout"
+                >
+                  一覧に戻る
+                </Link>
+              </div>
             </div>
           </section>
           <Footer />

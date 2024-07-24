@@ -1,59 +1,40 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Footer } from '../components/common/Footer';
-import { Header } from '../components/common/Header';
-import { Pagination } from '../components/utility/Pagination';
-import { BusinessType } from '../components/utility/type/BusinessType';
-import { Loading } from '../components/animetions/Loading';
-import { Judge } from '../components/utility/Judge';
+import { Footer } from '../layouts/Footer/Footer';
+import { Header } from '../layouts/Header/Header';
+import { Pagination } from '../layouts/Pagination/Pagination';
+import { BusinessType } from '../types/BusinessType';
+import { Loading } from '../components/Animation/Loading';
+import { isURLEnabled } from '../features/isURLEnabled';
+import { useFetchPostsData } from '../hooks/useFetchPostsData';
+import { fetchPaginationInfo } from '../features/fetchPaginationInfo';
+import {
+  ACQUISITION_CONDITION,
+  API,
+  BUSINESS_END_POINT,
+  DOMAIN,
+} from '../constants/api';
+import { useFetchCurrentPageId } from '../hooks/useFetchCurrentPageId';
+import { isPostsDataExisted } from '../features/isPostsDataExisted';
+import { BusinessItem } from '../layouts/BusinessItem/BusinessItem';
 
 export const Business = () => {
-  let { id } = useParams();
-  const [posts, setPosts] = useState<BusinessType[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [loading, setLoading] = useState<boolean>(true);
+  const currentPageId = useFetchCurrentPageId();
 
-  useEffect(() => {
-    fetch(
-      `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
-        import.meta.env.VITE_MICROCMS_ENDPOINT_BUSINESS
-      )}?limit=100&orders=-publishedAt`,
-      {
-        headers: {
-          'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),
-        },
-        method: 'GET',
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data.contents);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setPosts([]);
-        setLoading(false);
-      });
-  }, []);
+  const { postsData, isLoading } = useFetchPostsData<BusinessType>(
+    DOMAIN,
+    BUSINESS_END_POINT,
+    ACQUISITION_CONDITION,
+    API,
+    currentPageId
+  );
 
-  useEffect(() => {
-    setCurrentPage(Number(id));
-  }, [id]);
-
-  let PER_PAGE: number = 9;
-  let lastPost: number = currentPage * PER_PAGE;
-  let firstPost: number = lastPost - PER_PAGE;
-  let totalPosts: number = 1;
-  if (posts) {
-    totalPosts = posts.length;
-  }
-
-  let paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
+  const { lastPost, firstPost, paginationNumber } = fetchPaginationInfo(
+    currentPageId,
+    postsData
+  );
 
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
@@ -65,25 +46,16 @@ export const Business = () => {
                 これまで業務で携わってきたプロジェクトです
               </p>
 
-              {Judge(Number(id), paginationNumber) ? (
+              {isURLEnabled(currentPageId, paginationNumber) ||
+              isPostsDataExisted<BusinessType>(postsData) ? (
                 <>
-                  <ul className="business__wrapper">
-                    {posts.slice(firstPost, lastPost).map((post) => (
-                      <Link
-                        className="business__card"
-                        to={`/businessDetail/${post.id}`}
-                        key={post.id}
-                      >
-                        <p className="business__card--label">プロジェクト名:</p>
-                        <p className="business__card--lead">{post.name}</p>
-                        <p className="business__card--label">開発期間:</p>
-                        <p className="business__card--lead">{post.period}</p>
-                      </Link>
+                  <div className="business__wrapper">
+                    {postsData.slice(firstPost, lastPost).map((post) => (
+                      <BusinessItem key={post.id} post={post} />
                     ))}
-                  </ul>
+                  </div>
                   <Pagination
-                    id={Number(id)}
-                    currentPage={currentPage}
+                    currentPageId={currentPageId}
                     paginationNumber={paginationNumber}
                     pageUrl={'business'}
                   />

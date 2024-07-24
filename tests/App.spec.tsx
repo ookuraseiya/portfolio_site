@@ -9,20 +9,20 @@ import { BrowserRouter } from 'react-router-dom';
 import { About } from '../src/pages/About';
 import { Works } from '../src/pages/Works';
 import { Personal } from '../src/pages/Personal';
-import { PersonalType } from '../src/components/utility/type/PersonalType';
-import { Judge } from '../src/components/utility/Judge';
+import { PersonalType } from '../src/types/PersonalType';
+import { isURLEnabled } from '../src/features/isURLEnabled';
 import App from '../src/App';
 import { Main } from '../src/pages/Main';
 import { NotFoundPage } from '../src/pages/404';
 import { PersonalDetails } from '../src/pages/PersonalDetails';
 import { BusinessDetails } from '../src/pages/BusinessDetails';
 import { Business } from '../src/pages/Business';
-import { BusinessType } from '../src/components/utility/type/BusinessType';
-import { Header } from '../src/components/common/Header';
-import { Footer } from '../src/components/common/Footer';
-import { Loading } from '../src/components/animetions/Loading';
-import { Pagination } from '../src/components/utility/Pagination';
-import { ScrollTop } from '../src/components/utility/ScrollTop';
+import { BusinessType } from '../src/types/BusinessType';
+import { Header } from '../src/layouts/Header/Header';
+import { Footer } from '../src/layouts/Footer/Footer';
+import { Loading } from '../src/components/Animation/Loading';
+import { Pagination } from '../src/layouts/Pagination/Pagination';
+import { ScrollTop } from '../src/features/scrollTop';
 
 // scrollTopのモック化
 global.window.scrollTo = jest.fn();
@@ -198,12 +198,7 @@ describe('Paginationコンポーネントのテスト', () => {
   test('Paginationのレンダーテスト', () => {
     render(
       <BrowserRouter>
-        <Pagination
-          id={1}
-          currentPage={1}
-          paginationNumber={10}
-          pageUrl="test"
-        />
+        <Pagination currentPageId={1} paginationNumber={10} pageUrl="test" />
       </BrowserRouter>
     );
   });
@@ -211,12 +206,7 @@ describe('Paginationコンポーネントのテスト', () => {
   test('Paginationコンポーネントのスナップショットテスト', () => {
     const { asFragment } = render(
       <BrowserRouter>
-        <Pagination
-          id={1}
-          currentPage={1}
-          paginationNumber={10}
-          pageUrl="test"
-        />
+        <Pagination currentPageId={1} paginationNumber={10} pageUrl="test" />
       </BrowserRouter>
     );
     expect(asFragment()).toMatchSnapshot();
@@ -225,12 +215,7 @@ describe('Paginationコンポーネントのテスト', () => {
   test('Paginationの子コンポーネントのレンダーテスト', () => {
     render(
       <BrowserRouter>
-        <Pagination
-          id={1}
-          currentPage={1}
-          paginationNumber={10}
-          pageUrl="test"
-        />
+        <Pagination currentPageId={1} paginationNumber={10} pageUrl="test" />
       </BrowserRouter>
     );
     expect(screen.getByText('<')).toBeInTheDocument();
@@ -241,12 +226,7 @@ describe('Paginationコンポーネントのテスト', () => {
   test('Paginationのパステスト', () => {
     render(
       <BrowserRouter>
-        <Pagination
-          id={1}
-          currentPage={1}
-          paginationNumber={10}
-          pageUrl="test"
-        />
+        <Pagination currentPageId={1} paginationNumber={10} pageUrl="test" />
       </BrowserRouter>
     );
     expect(screen.getByText('<').closest('a')).toHaveAttribute(
@@ -262,12 +242,7 @@ describe('Paginationコンポーネントのテスト', () => {
   test('PaginationコンポーネントにLinkが2つあるか', () => {
     const { getAllByRole } = render(
       <BrowserRouter>
-        <Pagination
-          id={1}
-          currentPage={1}
-          paginationNumber={10}
-          pageUrl="test"
-        />
+        <Pagination currentPageId={1} paginationNumber={10} pageUrl="test" />
       </BrowserRouter>
     );
     const links = getAllByRole('link');
@@ -522,29 +497,23 @@ describe('404コンポーネントのテスト', () => {
   });
 });
 
-// Judge関数のテスト
-describe('Judge判定のテスト', () => {
-  test('Judgeのtrue判定', () => {
+// isURLEnabled関数のテスト
+describe('isURLEnabled判定のテスト', () => {
+  test('isURLEnabledのtrue判定', () => {
     const id = 2;
     const paginationNumber = 3;
-    expect(Judge(id, paginationNumber)).toBe(true);
+    expect(isURLEnabled(id, paginationNumber)).toBe(true);
   });
 
   test('idが0の時（false判定）', () => {
     const id = 0;
     const paginationNumber = 3;
-    expect(Judge(id, paginationNumber)).toBe(false);
+    expect(isURLEnabled(id, paginationNumber)).toBe(false);
   });
 
   test('idがpaginationNumberより値が大きい時（false判定）', () => {
     const id = 4;
     const paginationNumber = 3;
-    expect(Judge(id, paginationNumber)).toBe(false);
-  });
-
-  test('idがNumber以外の値の時（false判定）', () => {
-    const id = 'abc';
-    const paginationNumber = 3;
-    expect(Judge(id, paginationNumber)).toBe(false);
+    expect(isURLEnabled(id, paginationNumber)).toBe(false);
   });
 });

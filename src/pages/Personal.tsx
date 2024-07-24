@@ -1,58 +1,40 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Footer } from '../components/common/Footer';
-import { Header } from '../components/common/Header';
-import { Pagination } from '../components/utility/Pagination';
-import { PersonalType } from '../components/utility/type/PersonalType';
-import { Loading } from '../components/animetions/Loading';
-import { Judge } from '../components/utility/Judge';
+import { Footer } from '../layouts/Footer/Footer';
+import { Header } from '../layouts/Header/Header';
+import { Pagination } from '../layouts/Pagination/Pagination';
+import { PersonalType } from '../types/PersonalType';
+import { Loading } from '../components/Animation/Loading';
+import { isURLEnabled } from '../features/isURLEnabled';
+import { useFetchPostsData } from '../hooks/useFetchPostsData';
+import { fetchPaginationInfo } from '../features/fetchPaginationInfo';
+import {
+  ACQUISITION_CONDITION,
+  API,
+  DOMAIN,
+  PERSONAL_END_POINT,
+} from '../constants/api';
+import { useFetchCurrentPageId } from '../hooks/useFetchCurrentPageId';
+import { isPostsDataExisted } from '../features/isPostsDataExisted';
+import { PersonalItem } from '../layouts/PersonalItem/PersonalItem';
 
 export const Personal = () => {
-  let { id } = useParams();
-  const [posts, setPosts] = useState<PersonalType[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [loading, setLoading] = useState<boolean>(true);
+  const currentPageId = useFetchCurrentPageId();
 
-  useEffect(() => {
-    fetch(
-      `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
-        import.meta.env.VITE_MICROCMS_ENDPOINT_PERSONAL
-      )}?limit=100&orders=-publishedAt`,
-      {
-        headers: {
-          'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),
-        },
-        method: 'GET',
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data.contents);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setPosts([]);
-        setLoading(false);
-      });
-  }, []);
+  const { postsData, isLoading } = useFetchPostsData<PersonalType>(
+    DOMAIN,
+    PERSONAL_END_POINT,
+    ACQUISITION_CONDITION,
+    API,
+    currentPageId
+  );
 
-  useEffect(() => {
-    setCurrentPage(Number(id));
-  }, [id]);
-
-  let PER_PAGE: number = 9;
-  let lastPost: number = currentPage * PER_PAGE;
-  let firstPost: number = lastPost - PER_PAGE;
-  let totalPosts: number = 1;
-  if (posts) {
-    totalPosts = posts.length;
-  }
-  let paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
+  const { lastPost, firstPost, paginationNumber } = fetchPaginationInfo(
+    currentPageId,
+    postsData
+  );
 
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
@@ -63,30 +45,16 @@ export const Personal = () => {
               <p className="personal__lead">
                 これまで個人で開発してきたプロダクトです
               </p>
-              {Judge(Number(id), paginationNumber) ? (
+              {isURLEnabled(currentPageId, paginationNumber) ||
+              isPostsDataExisted<PersonalType>(postsData) ? (
                 <>
-                  <ul className="personal__wrapper">
-                    {posts.slice(firstPost, lastPost).map((post) => (
-                      <Link
-                        className="personal__card"
-                        to={`/personalDetail/${post.id}`}
-                        key={post.id}
-                      >
-                        <img
-                          className="personal__card--image"
-                          src={post.image.url}
-                          alt="これまで個人で開発してきたプロダクトの画像"
-                          height={''}
-                          width={''}
-                          loading="lazy"
-                        />
-                        <p className="personal__card--lead">{post.name}</p>
-                      </Link>
+                  <article className="personal__wrapper">
+                    {postsData.slice(firstPost, lastPost).map((post) => (
+                      <PersonalItem post={post} />
                     ))}
-                  </ul>
+                  </article>
                   <Pagination
-                    id={Number(id)}
-                    currentPage={currentPage}
+                    currentPageId={currentPageId}
                     paginationNumber={paginationNumber}
                     pageUrl={'personal'}
                   />

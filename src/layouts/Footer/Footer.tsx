@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { ScrollTop } from '../utility/ScrollTop';
+import { Link } from "react-router-dom";
+import { ScrollTop } from "../../features/scrollTop";
 
 export const Footer = () => {
   return (
@@ -12,10 +12,10 @@ export const Footer = () => {
               © 2024 Seiya's portfolio site
             </li>
             <li className="footer__link">
-              <Link to={'https://github.com/ookuraseiya'}>github</Link>
+              <Link to={"https://github.com/ookuraseiya"}>github</Link>
             </li>
             <li className="footer__link">
-              <Link to={'mailto:seiya.ookura@gmail.com?'}>contact</Link>
+              <Link to={"mailto:seiya.ookura@gmail.com?"}>contact</Link>
             </li>
           </ul>
         </div>

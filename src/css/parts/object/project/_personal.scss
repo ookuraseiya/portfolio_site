@@ -3,7 +3,6 @@
   @include responsive(xl) {
     margin: 0;
     height: 80vh;
-    @include flex();
     @include responsive(sm) {
       display: block;
       height: auto;
@@ -46,7 +45,7 @@
     @include container();
     align-items: flex-start;
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 30%;
     }

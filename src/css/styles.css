@@ -1036,9 +1036,6 @@ template {
   .personal {
     margin: 0;
     height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 576px) {

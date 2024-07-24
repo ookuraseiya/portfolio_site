@@ -1,39 +1,31 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Footer } from '../components/common/Footer';
-import { Header } from '../components/common/Header';
-import { PersonalType } from '../components/utility/type/PersonalType';
-import { Loading } from '../components/animetions/Loading';
+import { Link } from 'react-router-dom';
+import { Footer } from '../layouts/Footer/Footer';
+import { Header } from '../layouts/Header/Header';
+import { PersonalType } from '../types/PersonalType';
+import { Loading } from '../components/Animation/Loading';
+import { useFetchPostId } from '../hooks/useFetchPostId';
+import {
+  ACQUISITION_CONDITION,
+  API,
+  DOMAIN,
+  PERSONAL_END_POINT,
+} from '../constants/api';
+import { useFetchPostsData } from '../hooks/useFetchPostsData';
 
 export const PersonalDetails = () => {
-  let { id } = useParams();
-  const [posts, setPosts] = useState<PersonalType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const currentPageId = useFetchPostId();
 
-  useEffect(() => {
-    fetch(
-      `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
-        import.meta.env.VITE_MICROCMS_ENDPOINT_PERSONAL
-      )}?limit=100&orders=-publishedAt`,
-      {
-        headers: {
-          'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),
-        },
-        method: 'GET',
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(
-          data.contents.filter((data: { id: string }) => data.id === String(id))
-        );
-        setLoading(false);
-      });
-  }, [id]);
+  const { postsData, isLoading } = useFetchPostsData<PersonalType>(
+    DOMAIN,
+    PERSONAL_END_POINT,
+    ACQUISITION_CONDITION,
+    API,
+    currentPageId
+  );
 
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
@@ -45,7 +37,7 @@ export const PersonalDetails = () => {
                 選択したプロダクトの詳細です
               </p>
               <ul className="personalDetails__wrapper">
-                {posts.map((post) => (
+                {postsData.map((post) => (
                   <div className="personalDetails__richEditor" key={post.id}>
                     <div
                       dangerouslySetInnerHTML={{

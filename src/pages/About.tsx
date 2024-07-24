@@ -1,7 +1,7 @@
-import { Footer } from '../components/common/Footer';
-import { Header } from '../components/common/Header';
-import { Profile } from '../components/common/Profile';
-import { Skill } from '../components/common/Skill';
+import { Footer } from "../layouts/Footer/Footer";
+import { Header } from "../layouts/Header/Header";
+import { Profile } from "../layouts/Profile/Profile";
+import { Skill } from "../layouts/Skill/Skill";
 
 export const About = () => {
   return (
