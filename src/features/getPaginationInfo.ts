@@ -1,4 +1,4 @@
-export const fetchPaginationInfo = <T>(
+export const getPaginationInfo = <T>(
   currentPageId: number,
   postsData: T[]
 ) => {

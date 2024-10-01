@@ -5,13 +5,13 @@ import { PersonalType } from '../types/PersonalType';
 import { Loading } from '../components/Animation/Loading';
 import { isURLEnabled } from '../features/isURLEnabled';
 import { useFetchPostsData } from '../hooks/useFetchPostsData';
-import { fetchPaginationInfo } from '../features/fetchPaginationInfo';
+import { getPaginationInfo } from '../features/getPaginationInfo';
 import {
   ACQUISITION_CONDITION,
   API,
   DOMAIN,
   PERSONAL_END_POINT,
-} from '../constants/api';
+} from '../config/config';
 import { useFetchCurrentPageId } from '../hooks/useFetchCurrentPageId';
 import { isPostsDataExisted } from '../features/isPostsDataExisted';
 import { PersonalItem } from '../layouts/PersonalItem/PersonalItem';
@@ -27,7 +27,7 @@ export const Personal = () => {
     currentPageId
   );
 
-  const { lastPost, firstPost, paginationNumber } = fetchPaginationInfo(
+  const { lastPost, firstPost, paginationNumber } = getPaginationInfo(
     currentPageId,
     postsData
   );

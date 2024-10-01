@@ -1,3 +1,7 @@
 export const isPostsDataExisted = <T>(postsData: T[]) => {
-  return !(postsData.length === 0);
+  if (postsData.length !== 0) {
+    return true;
+  } else {
+    return false;
+  }
 };

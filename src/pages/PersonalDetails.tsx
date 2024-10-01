@@ -9,7 +9,7 @@ import {
   API,
   DOMAIN,
   PERSONAL_END_POINT,
-} from '../constants/api';
+} from '../config/config';
 import { useFetchPostsData } from '../hooks/useFetchPostsData';
 
 export const PersonalDetails = () => {
