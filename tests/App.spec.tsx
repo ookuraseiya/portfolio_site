@@ -22,10 +22,6 @@ import { Header } from '../src/layouts/Header/Header';
 import { Footer } from '../src/layouts/Footer/Footer';
 import { Loading } from '../src/components/Animation/Loading';
 import { Pagination } from '../src/layouts/Pagination/Pagination';
-// import { ScrollTop } from '../src/hooks/useScrollTop';
-
-// scrollTopのモック化
-// global.window.scrollTo = jest.fn();
 
 // ダミーデータ（personalデータ）
 const dummyPersonalPosts: PersonalType[] = [
@@ -249,22 +245,6 @@ describe('Paginationコンポーネントのテスト', () => {
     expect(links.length).toBe(2);
   });
 });
-
-// // ScrollTopコンポーネントのテスト
-// describe('ScrollTopコンポーネントのテスト', () => {
-//   test('ScrollTopコンポーネントのレンダー時にスクロールトップするかのテスト', () => {
-//     const scrollSpy = jest
-//       .spyOn(window, 'scrollTo')
-//       .mockImplementation(() => {});
-//     render(
-//       <BrowserRouter>
-//         <ScrollTop />
-//       </BrowserRouter>
-//     );
-//     expect(scrollSpy).toHaveBeenCalledWith(0, 0);
-//     scrollSpy.mockRestore();
-//   });
-// });
 
 // Mainコンポーネントのテスト
 describe('Mainコンポーネントのテスト', () => {
