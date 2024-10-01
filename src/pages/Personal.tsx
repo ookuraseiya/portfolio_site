@@ -12,12 +12,12 @@ import {
   DOMAIN,
   PERSONAL_END_POINT,
 } from '../config/config';
-import { useFetchCurrentPageId } from '../hooks/useFetchCurrentPageId';
+import { useGetCurrentPageId } from '../hooks/useGetCurrentPageId';
 import { isPostsDataExisted } from '../features/isPostsDataExisted';
 import { PersonalItem } from '../layouts/PersonalItem/PersonalItem';
 
 export const Personal = () => {
-  const currentPageId = useFetchCurrentPageId();
+  const currentPageId = useGetCurrentPageId();
 
   const { postsData, isLoading } = useFetchPostsData<PersonalType>(
     DOMAIN,

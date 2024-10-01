@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-export const useFetchCurrentPageId = () => {
+export const useGetCurrentPageId = () => {
   const { id } = useParams();
   const currentPageId = Number(id);
 
