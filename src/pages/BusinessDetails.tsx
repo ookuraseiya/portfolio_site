@@ -10,7 +10,7 @@ import {
   API,
   BUSINESS_END_POINT,
   DOMAIN,
-} from '../constants/api';
+} from '../config/config';
 
 export const BusinessDetails = () => {
   const currentPageId = useFetchPostId();

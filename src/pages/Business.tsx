@@ -5,13 +5,13 @@ import { BusinessType } from '../types/BusinessType';
 import { Loading } from '../components/Animation/Loading';
 import { isURLEnabled } from '../features/isURLEnabled';
 import { useFetchPostsData } from '../hooks/useFetchPostsData';
-import { fetchPaginationInfo } from '../features/fetchPaginationInfo';
+import { getPaginationInfo } from '../features/getPaginationInfo';
 import {
   ACQUISITION_CONDITION,
   API,
   BUSINESS_END_POINT,
   DOMAIN,
-} from '../constants/api';
+} from '../config/config';
 import { useFetchCurrentPageId } from '../hooks/useFetchCurrentPageId';
 import { isPostsDataExisted } from '../features/isPostsDataExisted';
 import { BusinessItem } from '../layouts/BusinessItem/BusinessItem';
@@ -27,7 +27,7 @@ export const Business = () => {
     currentPageId
   );
 
-  const { lastPost, firstPost, paginationNumber } = fetchPaginationInfo(
+  const { lastPost, firstPost, paginationNumber } = getPaginationInfo(
     currentPageId,
     postsData
   );
