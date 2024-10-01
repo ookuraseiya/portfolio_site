@@ -12,12 +12,12 @@ import {
   BUSINESS_END_POINT,
   DOMAIN,
 } from '../config/config';
-import { useFetchCurrentPageId } from '../hooks/useFetchCurrentPageId';
+import { useGetCurrentPageId } from '../hooks/useGetCurrentPageId';
 import { isPostsDataExisted } from '../features/isPostsDataExisted';
 import { BusinessItem } from '../layouts/BusinessItem/BusinessItem';
 
 export const Business = () => {
-  const currentPageId = useFetchCurrentPageId();
+  const currentPageId = useGetCurrentPageId();
 
   const { postsData, isLoading } = useFetchPostsData<BusinessType>(
     DOMAIN,

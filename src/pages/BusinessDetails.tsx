@@ -3,7 +3,7 @@ import { Footer } from '../layouts/Footer/Footer';
 import { Header } from '../layouts/Header/Header';
 import { BusinessType } from '../types/BusinessType';
 import { Loading } from '../components/Animation/Loading';
-import { useFetchPostId } from '../hooks/useFetchPostId';
+import { useGetPostId } from '../hooks/useGetPostId';
 import { useFetchPostsData } from '../hooks/useFetchPostsData';
 import {
   ACQUISITION_CONDITION,
@@ -13,7 +13,7 @@ import {
 } from '../config/config';
 
 export const BusinessDetails = () => {
-  const currentPageId = useFetchPostId();
+  const currentPageId = useGetPostId();
 
   const { postsData, isLoading } = useFetchPostsData<BusinessType>(
     DOMAIN,

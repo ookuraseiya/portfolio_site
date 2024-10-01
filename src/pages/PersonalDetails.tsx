@@ -3,7 +3,7 @@ import { Footer } from '../layouts/Footer/Footer';
 import { Header } from '../layouts/Header/Header';
 import { PersonalType } from '../types/PersonalType';
 import { Loading } from '../components/Animation/Loading';
-import { useFetchPostId } from '../hooks/useFetchPostId';
+import { useGetPostId } from '../hooks/useGetPostId';
 import {
   ACQUISITION_CONDITION,
   API,
@@ -13,7 +13,7 @@ import {
 import { useFetchPostsData } from '../hooks/useFetchPostsData';
 
 export const PersonalDetails = () => {
-  const currentPageId = useFetchPostId();
+  const currentPageId = useGetPostId();
 
   const { postsData, isLoading } = useFetchPostsData<PersonalType>(
     DOMAIN,
