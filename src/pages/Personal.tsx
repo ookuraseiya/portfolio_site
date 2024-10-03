@@ -45,12 +45,12 @@ export const Personal = () => {
               <p className="personal__lead">
                 これまで個人で開発してきたプロダクトです
               </p>
-              {isURLEnabled(currentPageId, paginationNumber) ||
+              {isURLEnabled(currentPageId, paginationNumber) &&
               isPostsDataExisted<PersonalType>(postsData) ? (
                 <>
                   <article className="personal__wrapper">
                     {postsData.slice(firstPost, lastPost).map((post) => (
-                      <PersonalItem post={post} />
+                      <PersonalItem key={post.id} post={post} />
                     ))}
                   </article>
                   <Pagination

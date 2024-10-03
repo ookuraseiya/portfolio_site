@@ -1,16 +1,19 @@
 import { isNumberType } from "./isNumberType";
 
 export const isURLEnabled = (
-  currentPageId: number,
-  paginationNumber: number
+  currentPageId: unknown,
+  paginationNumber: unknown
 ) => {
-  if (
-    1 > currentPageId ||
-    paginationNumber < currentPageId ||
-    isNumberType(currentPageId)
-  ) {
+  if (!isNumberType(currentPageId) || !isNumberType(paginationNumber)) {
     return false;
-  } else {
-    return true;
   }
+  const currentPage = currentPageId as number;
+  const pagination = paginationNumber as number;
+  if (Number.isNaN(currentPage) || Number.isNaN(pagination)) {
+    return false;
+  }
+  if (1 > currentPage || pagination < currentPage) {
+    return false;
+  }
+  return true;
 };

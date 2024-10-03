@@ -720,7 +720,7 @@ template {
   }
 }
 .business__card--error {
-  height: 60vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1138,7 +1138,7 @@ template {
   font-size: 2em;
 }
 .personal__card--error {
-  height: 60vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;

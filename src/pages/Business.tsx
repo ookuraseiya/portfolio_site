@@ -46,7 +46,7 @@ export const Business = () => {
                 これまで業務で携わってきたプロジェクトです
               </p>
 
-              {isURLEnabled(currentPageId, paginationNumber) ||
+              {isURLEnabled(currentPageId, paginationNumber) &&
               isPostsDataExisted<BusinessType>(postsData) ? (
                 <>
                   <div className="business__wrapper">

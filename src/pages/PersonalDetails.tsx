@@ -11,6 +11,7 @@ import {
   PERSONAL_END_POINT,
 } from '../config/config';
 import { useFetchPostsData } from '../hooks/useFetchPostsData';
+import { isPostsDataExisted } from '../features/isPostsDataExisted';
 
 export const PersonalDetails = () => {
   const currentPageId = useGetPostId();
@@ -30,33 +31,37 @@ export const PersonalDetails = () => {
       ) : (
         <>
           <Header />
-          <section className="personalDetails" data-testid="personalDetails">
-            <div className="personalDetails__container">
-              <h1 className="personalDetails__title">Details</h1>
-              <p className="personalDetails__lead">
-                選択したプロダクトの詳細です
-              </p>
-              <ul className="personalDetails__wrapper">
-                {postsData.map((post) => (
-                  <div className="personalDetails__richEditor" key={post.id}>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: post.details,
-                      }}
-                    ></div>
+          {isPostsDataExisted<PersonalType>(postsData) ? (
+            <section className="personalDetails" data-testid="personalDetails">
+              <div className="personalDetails__container">
+                <h1 className="personalDetails__title">Details</h1>
+                <p className="personalDetails__lead">
+                  選択したプロダクトの詳細です
+                </p>
+                <ul className="personalDetails__wrapper">
+                  {postsData.map((post) => (
+                    <div className="personalDetails__richEditor" key={post.id}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: post.details,
+                        }}
+                      ></div>
+                    </div>
+                  ))}
+                  <div className="personalDetails__button">
+                    <Link
+                      to={'/personal/1'}
+                      className="personalDetails__button--layout"
+                    >
+                      一覧に戻る
+                    </Link>
                   </div>
-                ))}
-                <div className="personalDetails__button">
-                  <Link
-                    to={'/personal/1'}
-                    className="personalDetails__button--layout"
-                  >
-                    一覧に戻る
-                  </Link>
-                </div>
-              </ul>
-            </div>
-          </section>
+                </ul>
+              </div>
+            </section>
+          ) : (
+            <h1 className="personal__card--error">プロダクトがありません。</h1>
+          )}
           <Footer />
         </>
       )}

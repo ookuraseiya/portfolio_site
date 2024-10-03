@@ -11,6 +11,7 @@ import {
   BUSINESS_END_POINT,
   DOMAIN,
 } from '../config/config';
+import { isPostsDataExisted } from '../features/isPostsDataExisted';
 
 export const BusinessDetails = () => {
   const currentPageId = useGetPostId();
@@ -30,33 +31,40 @@ export const BusinessDetails = () => {
       ) : (
         <>
           <Header />
-          <section className="businessDetails" data-testid="businessDetals">
-            <div className="businessDetails__container">
-              <h1 className="businessDetails__title">Details</h1>
-              <p className="businessDetails__lead">
-                選択したプロジェクトの詳細です
-              </p>
-              <div className="businessDetails__wrapper">
-                {postsData.map((post) => (
-                  <div className="businessDetails__richEditor" key={post.id}>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: post.details,
-                      }}
-                    ></div>
-                  </div>
-                ))}
+          {isPostsDataExisted<BusinessType>(postsData) ? (
+            <section className="businessDetails" data-testid="businessDetals">
+              <div className="businessDetails__container">
+                <h1 className="businessDetails__title">Details</h1>
+                <p className="businessDetails__lead">
+                  選択したプロジェクトの詳細です
+                </p>
+                <div className="businessDetails__wrapper">
+                  {postsData.map((post) => (
+                    <div className="businessDetails__richEditor" key={post.id}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: post.details,
+                        }}
+                      ></div>
+                    </div>
+                  ))}
+                </div>
+                <div className="businessDetails__button">
+                  <Link
+                    to={'/business/1'}
+                    className="businessDetails__button--layout"
+                  >
+                    一覧に戻る
+                  </Link>
+                </div>
               </div>
-              <div className="businessDetails__button">
-                <Link
-                  to={'/business/1'}
-                  className="businessDetails__button--layout"
-                >
-                  一覧に戻る
-                </Link>
-              </div>
-            </div>
-          </section>
+            </section>
+          ) : (
+            <h1 className="business__card--error">
+              プロジェクトがありません。
+            </h1>
+          )}
+
           <Footer />
         </>
       )}
