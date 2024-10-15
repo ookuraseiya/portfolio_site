@@ -64,7 +64,6 @@ export const BusinessDetails = () => {
               プロジェクトがありません。
             </h1>
           )}
-
           <Footer />
         </>
       )}

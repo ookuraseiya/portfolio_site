@@ -7,3 +7,4 @@ export const PERSONAL_END_POINT = String(
 );
 export const ACQUISITION_CONDITION = "?limit=100&orders=-publishedAt";
 export const API = String(import.meta.env.VITE_MICROCMS_API_KEY);
+export const GA_TRACKING_ID = String(import.meta.env.VITE_GA_TRACKING_ID);

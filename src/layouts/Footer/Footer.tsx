@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useScrollTop } from '../../hooks/useScrollTop';
+import { usePageTracking } from '../../hooks/usePageTracking';
 
 export const Footer = () => {
   useScrollTop();
+  usePageTracking();
   return (
     <>
       <footer className="footer" data-testid="footer">
