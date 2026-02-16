@@ -45,7 +45,8 @@ export const Personal = () => {
               <p className="personal__lead">
                 これまで個人で開発してきたプロダクトです
               </p>
-              {isURLEnabled(currentPageId, paginationNumber) &&
+              {/* microCMSで個人開発ページを削除したので、一時的な応急処置 */}
+              /* {isURLEnabled(currentPageId, paginationNumber) &&
               isPostsDataExisted<PersonalType>(postsData) ? (
                 <>
                   <article className="personal__wrapper">
@@ -63,7 +64,10 @@ export const Personal = () => {
                 <h1 className="personal__card--error">
                   プロダクトがありません。
                 </h1>
-              )}
+              )} */
+                <h1 className="personal__card--error">
+                  プロダクトがありません。
+                </h1>
             </div>
           </section>
           <Footer />
